@@ -1,0 +1,204 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 采购单
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+    .subnavbar
+      .ui.list
+        each val, index in [['#orders', '全部'], ['#orders-confirm','待确认'], ['#orders-pay','待付款'], ['#orders-package','待发货'], ['#orders-receive','待收货'], ['#orders-comment','待评价'], ['#orders-return','退款']]
+          if(index==0)
+            a.item.tab-link.active(href=val[0])= val[1]
+          else
+            a.item.tab-link(href=val[0])= val[1]
+.pages.navbar-through
+  .page.toolbar-fixed.with-subnavbar(data-page="orders")
+    .page-content
+      .tabs
+        #orders.tab.active
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 已发货
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 交易完成
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 交易完成
+        #orders-confirm.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 待确认
+        #orders-pay.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 待付款
+        #orders-package.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 待发货
+        #orders-receive.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 待收货
+        #orders-comment.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 待评价
+        #orders-return.tab
+          .list-block.orders
+            ul
+              li
+                a.item-content(href="order-detail.html")
+                  .item-inner
+                    .item-title 上海浦东店 
+                      span.date 2016-08-08
+                    .item-after 
+                      i.chevron-right-b.icon
+                  .item-inner.description
+                    .item-media
+                      img(src="http://placehold.it/50x50")
+                    .item-title 
+                      .pull-right
+                        span.price &yen;3350
+                        span.sub.price &yen;3550
+                      .header 订单号：C160701001
+                      .meta 共计商品:200件  合计:￥3050 <br> (含运费0.00）
+                  .item-inner
+                    span.red.status 退款
+

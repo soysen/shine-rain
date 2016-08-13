@@ -1,0 +1,75 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="order-list.html")
+        i.chevron-left.icon
+    .center.sliding 采购总表
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page.toolbar-fixed(data-page="order-list-detail")
+    .page-content
+      .content-block.header
+        .row
+          .col-25
+            div.dropdown
+              select
+                option 所有加盟商
+          .col-25
+            div.dropdown
+              select
+                option 2016 年
+          .col-25
+            div.dropdown
+              select
+                option 08 月
+          .col-25
+            div.dropdown
+              select
+                option 订单状态
+      img.image(src="img/order-chart.png")
+      .list-block
+        ul 
+          li.item-content.header
+            .row
+              .col-30
+              .col-20.text-center 订单数量
+              .col-20.text-center 总价
+              .col-20.text-center 订单状态
+              .col-10 
+          li
+            a.item-content.divider
+              .row
+                .col-30
+                  .header 南京新百店
+                  .description 2016-08-07
+                .col-20.text-center 1
+                .col-20.text-center &yen;595
+                .col-20.text-center.red.status 待发货
+                .col-10
+                  i.chevron-right-b.icon 
+          li
+            a.item-content.divider
+              .row
+                .col-30
+                  .header 南京新百店
+                  .description 2016-08-07
+                .col-20.text-center 1
+                .col-20.text-center &yen;400
+                .col-20.text-center.red.status 待评价
+                .col-10
+                  i.chevron-right-b.icon 
+          li
+            a.item-content.divider
+              .row
+                .col-30
+                  .header 南京新百店
+                  .description 2016-08-07
+                .col-20.text-center 1
+                .col-20.text-center &yen;780
+                .col-20.text-center.red.status 交易完成
+                .col-10
+                  i.chevron-right-b.icon 
+                  
+

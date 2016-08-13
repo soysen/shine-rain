@@ -1,0 +1,87 @@
+doctype
+html
+  head(lang='zh-cn')
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    title My App
+    // Path to Framework7 Library CSS
+    link(rel="stylesheet", href="css/#{stylesheetFilename}.css")
+    link(rel="stylesheet", href="css/#{stylesheetColorsFilename}.css")
+    // Path to your custom app styles
+    link(rel="stylesheet", href="css/app.css")
+  body
+    .statusbar-overlay
+    .views
+      .view.view-main
+        .navbar
+          .navbar-inner
+            .left
+              a
+                i.chevron-left.icon
+            .center.sliding 首页
+            .right
+              a(data-popover=".popover-links", class="link open-popover")
+                i.list.icon
+        .pages.navbar-through
+          .page.toolbar-fixed(data-page="index")
+            .page-content
+              .content-block.sections
+                a.section.orders(href="orders.html")
+                  .circular.title
+                    i.paper-list-b.icon 
+                    h3 采购单
+                a.section.order-list(href="order-list.html")
+                  .circular.title
+                    i.paper-list-edit.icon 
+                    h3 采购总表
+                a.section.operating-list(href="operating-list.html")
+                  .circular.title
+                    i.dashboard.icon 
+                    h3 运营总表
+        .toolbar.tabbar
+          .toolbar-inner
+            a.tab-link.active(href="index.html")
+              i.menu-form.icon
+              | 总表
+            a.tab-link(href="store.html")
+              i.menu-store.icon
+              | 开店
+            a.tab-link(href="message.html")
+              i.menu-message.icon
+              | 消息
+            a.tab-link(href="operating.html")
+              i.menu-business.icon
+              | 运营
+            a.tab-link(href="my.html")
+              i.menu-my.icon
+              | 我的
+
+    .popover.popover-links
+      .popover-angle
+      .popover-inner
+        .list-block
+          ul
+            li
+              a.notification(href="message.html")
+                i.message.icon
+                | 消息
+            li
+              a(href="index.html")
+                i.index.icon
+                | 首页
+            li
+              a(href="order-list.html")
+                i.paper-list.icon
+                | 采购总表
+            li
+              a(href="help.html") 
+                i.help.icon
+                | 帮助
+ 
+    // Path to Framework7 Library JS
+    script(type="text/javascript", src="js/#{scriptFilename}.js")
+    // Path to your app js
+    script(type="text/javascript", src="js/app.js")
+ 
