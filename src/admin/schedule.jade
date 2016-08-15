@@ -1,0 +1,124 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 南京新百店
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+    .subnavbar.big
+      .ui.list
+        each val, index in [['schedule.html', '期程规划'], ['site-option.html','选址辅助'], ['buy-list.html','必买清单']]
+          if(index==0)
+            a.item.link.active(href=val[0])= val[1]
+          else
+            a.item.link(href=val[0])= val[1]
+.toolbar.tabbar
+  .toolbar-inner
+    a.link(href="index.html")
+      i.menu-form.icon
+      | 总表
+    a.link.active(href="store.html")
+      i.menu-store.icon
+      | 开店
+    a.link(href="message.html")
+      i.menu-message.icon
+      | 消息
+    a.link(href="operating.html")
+      i.menu-business.icon
+      | 运营
+    a.link(href="my.html")
+      i.menu-my.icon
+      | 我的
+.pages.navbar-through
+  .page.toolbar-fixed.with-subnavbar.big(data-page="schedule")
+    .page-content
+      .tabs
+        .content-block.no-padding.yellow-section
+          .countdown-calendar
+            .calendar-container
+              .header 
+                i.icon.clock-w
+                | 倒计时
+              .content 
+                span.date 28
+                | 天
+        .content-block.no-padding-top
+          .content-block-inner
+            .list-block.schedule
+              ul
+                li.item-content
+                  .item.inner 选址日期：
+                  .item-after 
+                    span.date_num 6
+                    | 天
+                    span.divider / 
+                    | 至  
+                    .item-input
+                        input#datepicker-1.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 商圈评估日期：
+                  .item-after 
+                    span.date_num 8
+                    | 天
+                    span.divider / 
+                    | 至  
+                    .item-input
+                        input#datepicker-2.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 装修日期：
+                  .item-after 1
+                    span.date_num 5
+                    | 天
+                    span.divider / 
+                    | 至
+                    .item-input
+                        input#datepicker-3.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 人员招募日期：
+                  .item-after
+                    span.date_num  
+                    | 天
+                    span.divider / 
+                    | 至
+                    .item-input 
+                      input#datepicker-4.datepicker(type="text", value="", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 人员培训日期：
+                  .item-after 
+                    span.date_num 6
+                    | 天
+                    span.divider / 
+                    | 至 
+                    .item-input 
+                      input#datepicker-5.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 首批物料到店日期：
+                  .item-after 
+                    span.date_num 4
+                    | 天
+                    span.divider / 
+                    | 至
+                    .item-input 
+                      input#datepicker-6.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 开店日期：
+                  .item-after 
+                    span.date_num 6
+                    | 天
+                    span.divider / 
+                    | 至
+                    .item-input 
+                      input#datepicker-7.datepicker(type="text", value="2016.8.8", readonly="readonly")
+                    | 日止
+                li.item-content
+                  .item.inner 共计：
+                    span.num 31 
+                    | 天

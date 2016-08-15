@@ -1,0 +1,128 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 南京新百店
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+    .subnavbar.big
+      .ui.list
+        each val, index in [['schedule.html', '期程规划'], ['site-option.html','选址辅助'], ['buy-list.html','必买清单']]
+          if(index==0)
+            a.item.link.active(href=val[0])= val[1]
+          else
+            a.item.link(href=val[0])= val[1]
+.toolbar.tabbar
+  .toolbar-inner
+    a.link(href="index.html")
+      i.menu-form.icon
+      | 总表
+    a.link.active(href="store.html")
+      i.menu-store.icon
+      | 开店
+    a.link(href="message.html")
+      i.menu-message.icon
+      | 消息
+    a.link(href="operating.html")
+      i.menu-business.icon
+      | 运营
+    a.link(href="my.html")
+      i.menu-my.icon
+      | 我的
+.pages.navbar-through
+  .page.toolbar-fixed.with-subnavbar.big(data-page="site-option")
+    .page-content
+      .tabs
+        .content-block.no-padding-top
+          .content-block-inner
+            .list-block.media-list.sites
+              ul
+                li.item-content
+                  .item-media.red
+                    i.position-sm.icon
+                    | 2
+                  .item-inner
+                    .item-title-row
+                      .item-title 
+                        .dropdown
+                          select.red
+                            option 选址一
+                            option 选址二
+                      .item-after 江苏省 / 南京市
+                    .item-text 北京朝阳区朝阳北路101号朝阳大悦城2楼41号 铺（青年路口）
+            h6.header 门店位置
+            img.image(src="img/map.png")
+        .list-block.accordion-list
+          ul
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 房屋概况
+              .accordion-item-content
+                .content-block 密知微很他經素呢；館工器往家，們數紅你人已可，這構相？間因問一好設來上在己名情、不保詩出媽發洋是去過請食叫能到大自們第我以會想個清地走臺足，里己面投世眼出謝容了藝公時上平從何定歡最
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 房屋规模
+              .accordion-item-content
+                .content-block 密知微很他經素呢；館工器往家，們數紅你人已可，這構相？間因問一好設來上在己名情、不保詩出媽發洋是去過請食叫能到大自們第我以會想個清地走臺足，里己面投世眼出謝容了藝公時上平從何定歡最
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 外围概况
+              .accordion-item-content
+                .content-block 密知微很他經素呢；館工器往家，們數紅你人已可，這構相？間因問一好設來上在己名情、不保詩出媽發洋是去過請食叫能到大自們第我以會想個清地走臺足，里己面投世眼出謝容了藝公時上平從何定歡最
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 同行业调查表
+              .accordion-item-content
+                .content-block 密知微很他經素呢；館工器往家，們數紅你人已可，這構相？間因問一好設來上在己名情、不保詩出媽發洋是去過請食叫能到大自們第我以會想個清地走臺足，里己面投世眼出謝容了藝公時上平從何定歡最
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 竞争资料
+              .accordion-item-content
+                .content-block 密知微很他經素呢；館工器往家，們數紅你人已可，這構相？間因問一好設來上在己名情、不保詩出媽發洋是去過請食叫能到大自們第我以會想個清地走臺足，里己面投世眼出謝容了藝公時上平從何定歡最
+        .content-block.no-padding-top
+          .content-block-inner
+            h3.header 室外全景 （正面、侧面）
+            .row
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+            h3.header 室内全景 （窗户、柱子、消防栓位置等）
+            .row
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+                a.pb-popup(href="#")
+                  img.image(src="http://lorempixel.com/1024/1024/sports/1/")
+              .col-25
+        .content-block
+          .content-block-inner
+            form.check
+              .row
+                .col-50
+                  .item-radio
+                    input#is_check_1(type="radio", name="is_check", value=0, checked='checked')
+                    label(for="is_check_1") 审核通过
+                .col-50
+                  .item-radio
+                    input#is_check_2(type="radio", name="is_check", value=1)
+                    label(for="is_check_2") 有待商榷
+                textarea.comment(placeholder="评估内容")
+                button.button.button-big.button-fill.color-red(type="submit") 发布
