@@ -10,12 +10,18 @@
     .subnavbar.big
       .ui.list
         each val, index in [['schedule.html', '期程规划'], ['site-option.html','选址辅助'], ['buy-list.html','必买清单']]
-          if(index==0)
+          if(index==2)
             a.item.link.active(href=val[0])= val[1]
           else
             a.item.link(href=val[0])= val[1]
-.pages.navbar-through
-  .page.toolbar-fixed.with-subnavbar.big(data-page="buy-list")
+.pages.navbar-through.toolbar-fixed
+  .page.with-subnavbar.big(data-page="buy-list")
+    .toolbar.tabbar
+      .toolbar-inner
+        .row
+          .col-50.text-right.total-price 合计：<span class='price red'>￥2114.00</span>
+          .col-50
+            a#btn-share.button.button-fill.button-big.color-red(href='share-selector.html') <i class='share-w icon'></i> 发送加盟商
     .page-content
       .ui.list.red
         a.item.tab-link.active(href="#tab-1") 耗材

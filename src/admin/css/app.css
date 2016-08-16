@@ -25,6 +25,24 @@ html.ios-gt-8 .navbar .center {
 	backdrop-filter: blur(5px);
 }
 
+.content-block.calendar-red + .operating-header {
+	padding-top: 0px;
+}
+.content-block.calendar-red .content-block-inner {
+	background: #ff5662;
+}
+.content-block.calendar-red, 
+.content-block.calendar-red a {
+	color: #FFF;
+}
+.content-block.calendar-red a.title {
+	font-size: 1.1em;
+	line-height: 1.6em;
+}
+.content-block.calendar-red a.title .icon {
+	margin-left: 3px;
+}
+
 .navbar-through .with-subnavbar .page-content, 
 .navbar-fixed .with-subnavbar .page-content, 
 .navbar-through .page-content.with-subnavbar, 
@@ -69,6 +87,24 @@ i.icon {
 }
 i.icon.user {
 	background-image: url(../img/icon/icon-user.png);
+}
+i.icon.lock {
+	background-image: url(../img/icon/icon-lock.png);
+}
+i.icon.dropdown {
+	width: 11px;
+	height: 11px;
+	background-image: url(../img/icon/icon-dropdown-w.png);
+}
+i.icon.calendar-prev {
+	width: 24px;
+	height: 24px;
+	background-image: url(../img/icon/icon-calendar-prev-w.png);
+}
+i.icon.calendar-next {
+	width: 24px;
+	height: 24px;
+	background-image: url(../img/icon/icon-calendar-next-w.png);
 }
 i.icon.lock {
 	background-image: url(../img/icon/icon-lock.png);
@@ -140,7 +176,7 @@ i.icon.menu-store {
 i.icon.menu-form {
 	background-image: url(../img/icon/icon-menu-form.png);
 }
-// Tab link
+/* Tab link */
 a.link.active > i.icon.menu-message {
 	background-image: url(../img/icon/icon-menu-message-active.png);
 }
@@ -171,6 +207,9 @@ a.link.active > i.icon.menu-form {
 }
 .text-center {
 	text-align: center;
+}
+.text-green {
+	color: #1fba73 !important;
 }
 
 .yellow-section {
@@ -253,6 +292,11 @@ a.link.active > i.icon.menu-form {
 .operating-header {
 	padding-top: 10px;
 	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.operating-header > div:first-child {
+	padding-left: 10px;
 }
 
 label.label-checkbox input[type="checkbox"]:checked + .item-media i.icon-form-checkbox, 
@@ -266,7 +310,7 @@ span.title {
 	display: block;
 }
 span.label { 
-	padding: 5px 10px;
+	padding: 2px 5px;
 	display: inline-block;
 	border-radius: 30px;
 	font-size: 0.8em; 
@@ -283,6 +327,15 @@ span.blue.label {
 /* List */
 .list-block  {
 	margin-top: 0;
+}
+.list-block.media-list {
+	margin-bottom: 10px;
+}
+.list-block.media-list.contact-list .item-content .item-media {
+	width: 75px;
+}
+.list-block.media-list.contact-list .item-content .item-media img {
+	width: 100%;
 }
 .list-block .item-text {
 	height: auto;
@@ -471,7 +524,52 @@ ul.order-detail-list li.item {
 ul.order-detail-list li.item .pull-right {
 	float: right;
 }
-
+.list-block.media-list.express-process {
+	background: #FFF;
+	position: relative;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.list-block.media-list.express-process:before {
+	content: "";
+	position: absolute;
+	left: 29px;
+	width: 1px;
+	height: 100%;
+	margin-top: 15px;
+	background: #999999;
+}
+.list-block.media-list.express-process .item-content:before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	display: block;
+	top: 14px;
+	left: 24px;
+	background: #999;
+	border-radius: 50%;
+}
+.list-block.media-list.express-process .item-content.process:before {
+	background-color: #1fba73;
+}
+.list-block.media-list.express-process .item-content {
+	font-size: 0.9em;
+	padding-left: 65px;
+}
+.list-block.media-list.express-process .item-content:after {
+	margin-left: 65px;
+}
+.list-block.media-list.express-process .item-content.process .item-title,
+.list-block.media-list.express-process .item-content.process .item-text {
+	color: #1fba73;
+}
+.list-block.media-list.express-process .item-content .item-title,
+.list-block.media-list.express-process .item-content .item-text {
+	font-weight: 300;
+	color: #aeaeae;
+}
 .content-block.header {
 	margin: 10px 0;
 	padding: 0 10px;
@@ -596,6 +694,7 @@ a.item-content .row *[class*='col-'].red.status {
 	width: 100%;
 	padding: 10px 15px;
 	border-bottom: 1px dashed #CCC;
+	box-sizing: border-box;
 }
 .row.divider:last-child {
 	border-bottom: 0;
@@ -1170,4 +1269,103 @@ span.price.red {
 	color: #f85d5d;
 }
 
-
+.messages-content { 
+	background: #ececee;
+}
+.messages .messages-date { 
+	color: #FFF;
+	margin: 10px auto;
+	padding: 3px 5px;
+	background: #c5c5c5;
+	border-radius: 3px;
+}
+.messages .message {
+	max-width: 94%;
+}
+.message .message-text {
+	padding: 15px 16px;
+	font-size: 1em;
+	border-radius: 20px;
+}
+.messages .message-sent .message-text {
+	background: #f86161;
+	margin-right: 40px;
+}
+.messages .message-link:before {
+	display: none;
+}
+.messages .message-link .message-text {
+	background: #FFF;
+	border-radius: 5px;
+	padding: 10px;
+} 
+.messages .message-link .message-text span.link {
+	font-size: 0.8em;
+}
+.messages .message-link .message-text .card {
+	display: inline-block;
+	width: 100%;
+	margin: 10px 0 0;
+	box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+}
+.messages .message-link .message-text .card .image img {
+	border-radius: 5px;
+}
+.messages .message-link .message-text .card .image {
+	float: left;
+	width: 75px;
+	height: 75px;
+}
+.messages .message-link .message-text .card .content {
+	color: #999999;
+	font-size: 1em;
+	margin-left: 85px;
+	line-height: 1.5em;
+}
+.messages .message-link .message-text .card .content .meta b {
+	color: #000;
+}
+.messages .message-received .message-text {
+	margin-left: 40px;
+	color: #777777;
+	background: #FFF;
+}
+.messages .message-sent {
+	position: relative;
+}
+.messages .message-sent:before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	right: 26px;
+	border-right: 10px solid transparent;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 10px solid #f86161;
+}
+.messages .message-received:before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	left: 26px;
+	border-left: 10px solid transparent;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 10px solid #fff;
+}
+.message-avatar {
+	position: absolute;
+	margin-top: 0;
+	top: 8px;
+}
+.messages .message-received .message-avatar {
+	left: 0;
+}
+.messages .message-sent .message-avatar {
+	right: 0;
+}
+.messages .message {
+	position: relative;
+	display: block;
+	margin: 5px 10px;
+}

@@ -106,15 +106,7 @@ myApp.onPageInit('site-option', function (page) {
 
 
 myApp.onPageInit('buy-list', function (page) {
-	$$('.toolbar-inner').html("<div class='row'>"+
-		"<div class='col-50 text-right total-price'>合计：<span class='price red'>￥2114.00</span></div>"+
-		"<div class='col-50'>"+
-			"<a href='share-selector.html' id='btn-share' class='button button-fill button-big color-red'>"+
-				"<i class='share-w icon'></i> 发送加盟商"+
-			"</a>"+
-		"</div>"+
-	"</div>");
-
+	
 	$$(".num-tool a.button").on("click", function(e) {
 		var input = $(this).siblings('input');
 		var val = Number(input.val());

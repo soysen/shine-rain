@@ -3,7 +3,7 @@
     .left
       a.back(href="index.html")
         i.chevron-left.icon
-    .center.sliding 运营总表
+    .center.sliding 每日运营
     .right
       a(data-popover=".popover-links", class="link open-popover")
         i.list.icon
@@ -11,7 +11,7 @@
   .page.toolbar-fixed(data-page="operating-list")
     .toolbar.tabbar
       .toolbar-inner
-        a.link.active(href="index.html")
+        a.link(href="index.html")
           i.menu-form.icon
           | 总表
         a.link(href="store.html")
@@ -20,124 +20,88 @@
         a.link(href="message.html")
           i.menu-message.icon
           | 消息
-        a.link(href="operating.html")
+        a.link.active(href="operating.html")
           i.menu-business.icon
           | 运营
         a.link(href="my.html")
           i.menu-my.icon
           | 我的
     .page-content
-      .content-block.no-padding-top
+      .content-block.no-padding-top.calendar-red
         .content-block-inner
           .row
-            .col-33
-              div.dropdown.divider
-                select
-                  option 南京新百店
-            .col-33
-              div.dropdown.divider
-                select
-                  option 2016 年
-            .col-33
-              div.dropdown
-                select
-                  option 08 月
+            .col-20
+              a.prev
+                i.calendar-prev.icon
+            .col-60.text-center
+              a.title 2016-8-10 星期三
+                i.dropdown.icon
+            .col-20.text-right
+              a.next
+                i.calendar-next.icon
       .row.header.operating-header
-        .col-25.text-center 
+        .col-35 
           span.title 日期
           i.calendar-red.icon
-        .col-25.text-center 
+        .col-20.text-center 
           span.title 开店检查
           span.yellow.label OPEN
-        .col-25.text-center 
+        .col-20.text-center 
           span.title 闭店检查
           span.blue.label CLOSE
-        .col-25.text-center 
+        .col-20.text-center 
           span.title 盘点检查
           i.check-green.icon
       .section.bg-white
         .row.divider
-          .col-25 08 / 10
-          .col-25.text-center 
+          .col-35 上海浦东店
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox")
               .item-media
                 i.icon.icon-form-checkbox
         .row.divider
-          .col-25 08 / 10
-          .col-25.text-center 
+          .col-35 南京新百店
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
         .row.divider
-          .col-25 08 / 10
-          .col-25.text-center 
+          .col-35 天津和平路店店
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox", checked="checked")
               .item-media
                 i.icon.icon-form-checkbox
-          .col-25.text-center 
+          .col-20.text-center 
             label.label-checkbox.item-content
               input(type="checkbox")
               .item-media
                 i.icon.icon-form-checkbox
-        .row.divider
-          .col-25 08 / 10
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox", checked="checked")
-              .item-media
-                i.icon.icon-form-checkbox
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox")
-              .item-media
-                i.icon.icon-form-checkbox
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox", checked="checked")
-              .item-media
-                i.icon.icon-form-checkbox
-        .row.divider
-          .col-25 08 / 10
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox", checked="checked")
-              .item-media
-                i.icon.icon-form-checkbox
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox")
-              .item-media
-                i.icon.icon-form-checkbox
-          .col-25.text-center 
-            label.label-checkbox.item-content
-              input(type="checkbox", checked="checked")
-              .item-media
-                i.icon.icon-form-checkbox
+        
