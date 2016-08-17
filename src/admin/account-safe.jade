@@ -1,0 +1,43 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 账号安全
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page.toolbar-fixed(data-page="account-safe")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-form.icon
+          | 总表
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="operating.html")
+          i.menu-business.icon
+          | 运营
+        a.link.active(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .list-block
+        ul
+          li.item-content
+            .item-inner
+              .item-title.label 旧密码
+              .item-input <input type="text" name="old_pwd" value="123456">
+          li.item-content
+            .item-inner
+              .item-title.label 新密码
+              .item-input <input type="password" name="password" value="123456">
+          li.item-content
+            .item-inner
+              .item-title.label 确认新密码
+              .item-input <input type="password" name="password_comfirmation">

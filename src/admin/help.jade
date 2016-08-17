@@ -1,0 +1,51 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 帮助
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page.toolbar-fixed(data-page="help")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-form.icon
+          | 总表
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="operating.html")
+          i.menu-business.icon
+          | 运营
+        a.link.active(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .list-block
+        ul
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 产品操作手册
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 店长手册
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 店面选址手册
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 前厅运营手册
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 营销手册

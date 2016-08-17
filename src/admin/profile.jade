@@ -1,0 +1,53 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 个人资料
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page.toolbar-fixed(data-page="profile")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-form.icon
+          | 总表
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="operating.html")
+          i.menu-business.icon
+          | 运营
+        a.link.active(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .list-block
+        ul
+          li
+            a.item-content.item-link.avatar
+              .item-inner
+                .item-title 头像
+                .item-after
+                  img(src="http://placehold.it/86x86").image
+      .list-block
+        ul
+          li
+            a.item-content.item-link
+              .item-title 用户名
+              .item-after 0eghcsoi9
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 昵称 
+                .item-after 天瑞华
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 性别
+                .item-after 未设置

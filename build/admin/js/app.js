@@ -160,3 +160,50 @@ myApp.onPageInit('share-selector', function (page) {
 	});
 });
 
+myApp.onPageInit('calendar', function (page) {
+	var $$ = Dom7;
+	var monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月' , '9月' , '10月', '11月', '12月'];
+	 
+	var calendarInline = myApp.calendar({
+	    container: '#calendar-inline-container',
+	    value: [new Date()],
+	    weekHeader: false,
+	    toolbarTemplate: 
+	    	'<div class="picker-calendar-row days">' + 
+        		'<div class="picker-calendar-day">日</div>' +
+        		'<div class="picker-calendar-day">一</div>' +
+        		'<div class="picker-calendar-day">二</div>' +
+        		'<div class="picker-calendar-day">三</div>' +
+        		'<div class="picker-calendar-day">四</div>' +
+        		'<div class="picker-calendar-day">五</div>' +
+        		'<div class="picker-calendar-day">六</div>' +
+        	'</div>' + 
+	        '<div class="toolbar calendar-custom-toolbar">' +
+	            '<div class="toolbar-inner">' +
+	            	'<div class="left"></div>' +
+	                '<div class="center text-center"></div>' +
+	            	'<div class="right"></div>' +
+	            '</div>' +
+	        '</div>',
+	    onOpen: function (p) {
+	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
+	        $$('.prev').on('click', function () {
+	            calendarInline.prevMonth();
+	        });
+	        $$('.next').on('click', function () {
+	            calendarInline.nextMonth();
+	        });
+	    },
+	    onMonthYearChangeStart: function (p) {
+	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
+	    }
+	});
+});
+
+myApp.onPageInit('my', function (page) {
+	$$('.navbar').addClass('no-bg');
+	
+	$$("a").click(function() {
+		$$('.navbar').removeClass('no-bg');
+	})
+});
