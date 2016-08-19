@@ -7084,10 +7084,10 @@
                     if (app.params.tapHold) {
                         clearTimeout(tapHoldTimeout);
                     }
-        			if (app.params.activeState) {
-        				clearTimeout(activeTimeout);
-        				removeActive();
-        			}
+                    if (app.params.activeState) {
+                        clearTimeout(activeTimeout);
+                        removeActive();
+                    }
                     if (app.params.material && app.params.materialRipple) {
                         rippleTouchMove();
                     }

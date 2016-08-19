@@ -1,0 +1,124 @@
+doctype
+html
+  head(lang='zh-cn')
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    title My App
+    // Path to Framework7 Library CSS
+    link(rel="stylesheet", href="css/#{stylesheetFilename}.css")
+    link(rel="stylesheet", href="css/#{stylesheetColorsFilename}.css")
+    // Path to your custom app styles
+    link(rel="stylesheet", href="css/app.css")
+  body
+    .statusbar-overlay
+    .views
+      .view.view-main
+        .navbar
+          .navbar-inner
+            .left
+            .center.sliding 首页
+            .right
+              a(data-popover=".popover-links", class="link open-popover")
+                i.list.icon
+        .pages.navbar-through.toolbar-through
+          .page(data-page="index")
+            .toolbar.tabbar
+              .toolbar-inner
+                a.link.active(href="index.html")
+                  i.menu-index.icon
+                  | 首页
+                a.link(href="message.html")
+                  i.menu-message.icon
+                  | 消息
+                a.link(href="store.html")
+                  i.menu-store.icon
+                  | 开店
+                a.link(href="operating.html")
+                  i.menu-cart.icon
+                  | 商城 
+                a.link(href="my.html")
+                  i.menu-my.icon
+                  | 我的
+            .page-content
+              .swiper-container.swiper-init
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="img/banner.png").image
+                  .swiper-slide
+                    img(src="img/banner.png").image
+                  .swiper-slide
+                    img(src="img/banner.png").image
+                .swiper-pagination
+                    
+              .content-block
+                .content-block-inner
+                  .row.promotion.divider
+                    .col-50.countdown
+                      .header.red <i class="clock-r icon"></i> 倒计时
+                      .description 开店时间  争分夺秒
+                      .image 
+                        span.calendar 28
+                        | 天
+                    .col-50
+                      .header.red <span class="red label">NEW</span> 新品上市
+                      .description 快来探索  新口味 
+                      .image
+                        img(src="img/new_image.png")
+              a.link
+                img(src="img/banner-2.png").image
+              a.link
+                img(src="img/banner-3.png").image
+            
+          .page.login-screen.change-pw.modal-in(data-page="change-pw")
+            .modal-container
+              .login-screen-title 为了您的账户安全! <br/>请修改密码!
+              form
+                .list-block
+                  ul
+                    li.item-content
+                      .item-inner
+                        .item-title.label 旧密码
+                        .item-input
+                          input(type="password")
+                    li.item-content
+                      .item-inner
+                        .item-title.label 新密码
+                        .item-input
+                          input(type="password")
+                .list-block
+                  ul
+                    li
+                      button.button.button-big.button-fill.color-red 保存    
+    .popover.popover-links
+      .popover-angle
+      .popover-inner
+        .list-block
+          ul
+            li
+              a.notification(href="message.html")
+                i.message.icon
+                | 消息
+            li
+              a(href="index.html")
+                i.index.icon
+                | 首页
+            li
+              a(href="order-list.html")
+                i.cart-w.icon
+                | 购物车
+            li
+              a(href="help.html") 
+                i.help.icon
+                | 帮助
+            li
+              a(href="help.html") 
+                i.cart-w.icon
+                | 开店历史
+    // Jquery
+    // Path to Framework7 Library JS
+    script(type="text/javascript", src="js/#{scriptFilename}.js")
+    // Path to your app js
+    script(type="text/javascript", src="js/app.js")
+ 

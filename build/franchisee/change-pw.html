@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh-cn">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"></div>
+            <div class="center sliding">首页</div>
+            <div class="right"><a data-popover=".popover-links" class="link open-popover"><i class="list icon"></i></a></div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page">
+            <div class="toolbar tabbar">
+              <div class="toolbar-inner"><a href="index.html" class="link active"><i class="menu-index icon"></i>首页</a><a href="message.html" class="link"><i class="menu-message icon"></i>消息</a><a href="store.html" class="link"><i class="menu-store icon"></i>开店</a><a href="operating.html" class="link"><i class="menu-cart icon"></i>商城 </a><a href="my.html" class="link"><i class="menu-my icon"></i>我的</a></div>
+            </div>
+            <div class="page-content">
+              <div class="swiper-container swiper-init">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/banner.png" class="image"></div>
+                  <div class="swiper-slide"><img src="img/banner.png" class="image"></div>
+                  <div class="swiper-slide"><img src="img/banner.png" class="image"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <div class="row promotion divider">
+                    <div class="col-50 countdown">
+                      <div class="header red"><i class="clock-r icon"></i> 倒计时</div>
+                      <div class="description">开店时间  争分夺秒</div>
+                      <div class="image"> <span class="calendar">28</span>天</div>
+                    </div>
+                    <div class="col-50">
+                      <div class="header red"><span class="red label">NEW</span> 新品上市</div>
+                      <div class="description">快来探索  新口味 </div>
+                      <div class="image"><img src="img/new_image.png"></div>
+                    </div>
+                  </div>
+                </div>
+              </div><a class="link"><img src="img/banner-2.png" class="image"></a><a class="link"><img src="img/banner-3.png" class="image"></a>
+            </div>
+          </div>
+          <div data-page="change-pw" class="page login-screen change-pw modal-in">
+            <div class="modal-container">
+              <div class="login-screen-title">为了您的账户安全! <br/>请修改密码!</div>
+              <form>
+                <div class="list-block">
+                  <ul>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">旧密码</div>
+                        <div class="item-input">
+                          <input type="password">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">新密码</div>
+                        <div class="item-input">
+                          <input type="password">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <button class="button button-big button-fill color-red">保存    </button>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popover popover-links">
+      <div class="popover-angle"></div>
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <li><a href="message.html" class="notification"><i class="message icon"></i>消息</a></li>
+            <li><a href="index.html"><i class="index icon"></i>首页</a></li>
+            <li><a href="order-list.html"><i class="cart-w icon"></i>购物车</a></li>
+            <li><a href="help.html"> <i class="help icon"></i>帮助</a></li>
+            <li><a href="help.html"> <i class="cart-w icon"></i>开店历史</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Jquery-->
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh-cn">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-through">
+          <div data-page="login" class="page">
+            <div class="page-content login-screen-content modal-in">
+              <div class="content-block">
+                <div class="login-screen-title"><img src="img/logo.png"></div>
+                <form action="index.html">
+                  <div class="list-block">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label"><i class="user icon"></i></div>
+                        <div class="item-input">
+                          <input type="text" name="email" placeholder="请输入账号">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label"> <i class="lock icon"></i></div>
+                        <div class="item-input">
+                          <input type="password" name="password" placeholder="请输入密码">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-block">
+                    <button class="button button-big color-red button-fill">登录</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

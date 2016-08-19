@@ -307,6 +307,24 @@ a.link.active > i.icon.menu-form {
 .login-screen-title img {
 	width: 156px;
 }
+.login-screen-content .list-block .item-content:after {
+	display: none;
+}
+.login-screen-content .list-block .item-content .item-inner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #c8c7cc;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
 
 .operating-header {
 	padding-top: 10px;
