@@ -31,6 +31,14 @@ html.ios-gt-8 .navbar .center {
 	backdrop-filter: blur(5px);
 }
 
+
+.content-block.calendar-red .content-block-inner:before {
+	background: none;
+}
+.content-block.calendar-red + .content-block > .content-block-inner:before, 
+.content-block.calendar-red .content-block-inner:after {
+	display: none;
+}
 .content-block.calendar-red + .operating-header {
 	padding-top: 0px;
 }
@@ -670,7 +678,7 @@ row .col-30 {
 	padding-right: 15px;
 }
 .item-content.header {
-	border-bottom: 1px solid #CCC;
+	/* border-bottom: 1px solid #CCC; */
 }
 .item-content.header .row *[class*='col-'] {
 	font-size: 0.8em;
@@ -859,10 +867,6 @@ a.item-content .row *[class*='col-'].red.status {
 .popover-links ~ .modal-overlay {
 	background: rgba(0,0,0,0) !important;
 }
-
-// #picker-date-container {
-
-// }
 
 /* Sub Navbar */
 .subnavbar {
@@ -1407,7 +1411,22 @@ span.price.red {
 	margin: 5px 10px;
 }
 
-
+/* Picker Calendar */
+.picker-calendar {
+	height: calc(100vh - 138px);
+}
+.picker-calendar-month .picker-calendar-title {
+	font-size: 1.6em;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+	text-align: center;
+}
+.picker-calendar-months-wrapper {
+	height: 240px;
+}
+.picker-calendar-day.picker-calendar-day-prev, .picker-calendar-day.picker-calendar-day-next {
+	opacity: 0;
+}
 .picker-calendar-row.days {
 	background: #666666;
 }
@@ -1437,7 +1456,7 @@ span.price.red {
 	width: 32px;
 	height: 32px;
 	line-height: 32px;
-    text-indent: -2px;
+    text-indent: 0px;
 }
 .picker-calendar-day.picker-calendar-day-selected span {
 	background: #ff5662;
@@ -1505,6 +1524,14 @@ div[data-page="my"] .page-content {
 .content-block.about {
 	text-align: center;
 }
-.content-block.about img {
-	
+
+.highcharts-axis-labels.highcharts-yaxis-labels,
+.highcharts-axis {
+	display: none;
 }
+
+.chart {
+	background: #ff8989;
+	box-shadow: inset 20px -30px 50px #ff6969;
+}
+

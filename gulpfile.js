@@ -312,6 +312,11 @@
             }))
             .pipe(gulp.dest(paths.build.root));
 
+        gulp.src('./node_modules/highcharts/highcharts.js')
+            .pipe(gulp.dest('build/admin/js'));
+        gulp.src('./node_modules/highcharts/highcharts.src.js')
+            .pipe(gulp.dest('build/admin/js'));
+            
         gulp.src(paths.source.root + 'admin/js/app.js')
             .pipe(gulp.dest('build/admin/js'));
 

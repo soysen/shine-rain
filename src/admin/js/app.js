@@ -160,6 +160,114 @@ myApp.onPageInit('share-selector', function (page) {
 	});
 });
 
+myApp.onPageInit('order-list', function (page) {
+	
+	$('#list-chart').highcharts({
+        chart: {
+            type: 'line',
+            height: 160,
+            color: "#FFF",
+            backgroundColor: 'transparent',
+        },
+        colors: ['#FFFFFF'],
+        legend: { enable: false },
+        title: { text: "" },
+        subtitle: { text: "" },
+		credits: { enabled: false },
+		legend:	 { enabled: false },
+		tooltip: { enabled: false }, 
+		exporting: { enabled: false },
+        yAxis: {
+        	gridLineWidth: 0, minorGridLineWidth: 0,
+			labels: {
+                enabled: false
+            },
+            title: {
+                text: null
+            }
+        }, 
+        xAxis: {
+            categories: ['4月', '5月', '6月', '7月', '8月'],
+            gridLineWidth: 0, minorGridLineWidth: 0,
+            labels: {
+            	style: { color: "#ffffff" }
+            }
+        },
+        plotOptions: {
+            line: {
+            	color: "#fff",
+                dataLabels: {
+                    enabled: true,
+                    style: { 
+                    	fontSize: '11px', textShadow: "none",
+                    	// transform: 'scale(0.85)',
+                    	color: "rgba(255,255,255,.8)"
+                    }
+                }
+                // enableMouseTracking: false
+            }
+        },
+        series: [{
+            data: [2393, 9009, 4009, 8904, 12090]
+        }]
+    });
+
+});
+
+myApp.onPageInit('order-list-detail', function (page) {
+	
+	$('#list-detail-chart').highcharts({
+        chart: {
+            type: 'line',
+            height: 160,
+            color: "#FFF",
+            backgroundColor: 'transparent',
+        },
+        colors: ['#FFFFFF'],
+        legend: { enable: false },
+        title: { text: "" },
+        subtitle: { text: "" },
+		credits: { enabled: false },
+		legend:	 { enabled: false },
+		tooltip: { enabled: false }, 
+		exporting: { enabled: false },
+        yAxis: {
+        	gridLineWidth: 0, minorGridLineWidth: 0,
+			labels: {
+                enabled: false
+            },
+            title: {
+                text: null
+            }
+        }, 
+        xAxis: {
+            categories: ['4月', '5月', '6月', '7月', '8月'],
+            gridLineWidth: 0, minorGridLineWidth: 0,
+            labels: {
+            	style: { color: "#ffffff" }
+            }
+        },
+        plotOptions: {
+            line: {
+            	color: "#fff",
+                dataLabels: {
+                    enabled: true,
+                    style: { 
+                    	fontSize: '11px', textShadow: "none",
+                    	// transform: 'scale(0.85)',
+                    	color: "rgba(255,255,255,.8)"
+                    }
+                }
+                // enableMouseTracking: false
+            }
+        },
+        series: [{
+            data: [2393, 9009, 4009, 8904, 12090]
+        }]
+    });
+
+});
+
 myApp.onPageInit('calendar', function (page) {
 	var $$ = Dom7;
 	var monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月' , '9月' , '10月', '11月', '12月'];
@@ -167,6 +275,9 @@ myApp.onPageInit('calendar', function (page) {
 	var calendarInline = myApp.calendar({
 	    container: '#calendar-inline-container',
 	    value: [new Date()],
+	    direction: 'vertical', 
+	    firstDay: 0,
+	    toolbar: false,
 	    weekHeader: false,
 	    toolbarTemplate: 
 	    	'<div class="picker-calendar-row days">' + 
@@ -177,14 +288,7 @@ myApp.onPageInit('calendar', function (page) {
         		'<div class="picker-calendar-day">四</div>' +
         		'<div class="picker-calendar-day">五</div>' +
         		'<div class="picker-calendar-day">六</div>' +
-        	'</div>' + 
-	        '<div class="toolbar calendar-custom-toolbar">' +
-	            '<div class="toolbar-inner">' +
-	            	'<div class="left"></div>' +
-	                '<div class="center text-center"></div>' +
-	            	'<div class="right"></div>' +
-	            '</div>' +
-	        '</div>',
+        	'</div>',
 	    onOpen: function (p) {
 	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
 	        $$('.prev').on('click', function () {
@@ -194,8 +298,23 @@ myApp.onPageInit('calendar', function (page) {
 	            calendarInline.nextMonth();
 	        });
 	    },
+	    onMonthAdd: function(p, values, displayValues) {
+	    	var m = $(values).data('month');
+	    	var y = $(values).data('year');
+	    	$$(values).prepend("<div class='picker-calendar-title'>"+y+"年 "+monthNames[m]+"</div>");
+	    },
+	    onChange: function (p, values, displayValues) {
+	    	console.log("onChange: "+p, values, displayValues);
+	    },
 	    onMonthYearChangeStart: function (p) {
+	    	console.log("onMonthYearChangeStart: "+p, p.currentYear, p.currentMonth);
 	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
+	    },
+	    onMonthYearChangeEnd: function (p, year, month) {
+	    	console.log("onMonthYearChangeEnd: "+p, year, month);
+	    },
+	    onDayClick: function (p, dayContainer, year, month, day) {
+	    	console.log("onDayClick: "+p, dayContainer, year, month, day);
 	    }
 	});
 });

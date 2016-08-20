@@ -1,0 +1,59 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="message.html")
+        i.chevron-left.icon
+    .center.sliding 消息
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through.toolbar-through
+  .page(data-page="message-box")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link.active(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="operating.html")
+          i.menu-cart.icon
+          | 商城 
+        a.link(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content.messages-content
+      .messages
+        .messages-date 上午 10:17
+        .message.message-sent.message-link
+          .message-text
+            a(href="http://www.360doc.com/userhome/6827195", target="_blank") 
+              span.link http://www.360doc.com/userhome/6827195
+              .card
+                .image
+                  img(src="http://lorempixel.com/output/food-q-c-75-75-1.jpg")
+                .content
+                  .meta <b>订单详情: </b>招牌锅底火锅料
+                  .meta <b>数量：</b>300件
+                  .meta <b>价格：</b><span class="price red">3000元</span>
+          .message-avatar(style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-1.jpg)")
+        .message.message-sent 
+          .message-text 经理，我定的货你帮我看看。
+          .message-avatar(style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-1.jpg)")
+        .message.message-received 
+          .message-text 你的料包在加点，你的店地段好，销售高。
+          .message-avatar(style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)")
+        .message.message-sent 
+          .message-text 好的，谢谢！
+          .message-avatar(style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-1.jpg)")
+
+
+
+
+
+
+

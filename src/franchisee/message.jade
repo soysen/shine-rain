@@ -1,0 +1,64 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="index.html")
+        i.chevron-left-w.icon
+    .center.sliding 消息
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list-w.icon
+.pages.toolbar-through
+  .page(data-page="message")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link.active(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="operating.html")
+          i.menu-cart.icon
+          | 商城 
+        a.link(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+        img(src="img/banner-message.png").image
+        .list-block.media-list
+          ul
+            li
+              a.item-link.item-content(href="message-box.html")
+                .item-media
+                  img(src="http://placehold.it/48x48")
+                  label.notification 2
+                .item-inner
+                  .item-title-row
+                    .item-title 运营经理
+                    .item-after.text-sm 10:15
+                  .item-text 订单数量可以再追加，你们店地址不错...
+        .list-block.media-list
+          ul
+            li
+              a.item-link.item-content(href="express.html")
+                .item-media
+                  img(src="img/order-news.png")
+                .item-inner
+                  .item-title-row
+                    .item-title 订单消息
+                    .item-after.text-sm 昨天
+                  .item-text 订单已发货！您购买的开店大礼包已发...
+            li
+              a.item-link.item-content(href="news.html")
+                .item-media
+                  img(src="img/messages.png")
+                .item-inner
+                  .item-title-row
+                    .item-title 互动消息
+                    .item-after.text-sm 昨天
+                  .item-text 新品出炉，好货不断！
+      
+  
