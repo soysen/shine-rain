@@ -1,0 +1,126 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 开店助手
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.toolbar-through
+  .page(data-page="schedule")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link.active(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="operating.html")
+          i.menu-cart.icon
+          | 商城 
+        a.link(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .content-block.no-padding.yellow-section
+        .countdown-calendar
+          .calendar-container
+            .header 
+              i.icon.clock-w
+              | 倒计时
+            .content 
+              span.date 31
+              | 天
+      .content-block.no-padding-top
+        .content-block-inner
+          .list-block.schedule
+            ul
+              li.item-content
+                .item-inner 选址日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至  
+                  .item-input
+                      input#datepicker-1.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 商圈评估日期：
+                .item-after 
+                  span.date_num 8
+                  | 天
+                  span.divider / 
+                  | 至  
+                  .item-input
+                      input#datepicker-2.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 装修日期：
+                .item-after 1
+                  span.date_num 5
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input
+                      input#datepicker-3.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 人员招募日期：
+                .item-after
+                  span.date_num  
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-4.datepicker(type="text", value="", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 人员培训日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至 
+                  .item-input 
+                    input#datepicker-5.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 首批物料到店日期：
+                .item-after 
+                  span.date_num 4
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-6.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner 开店日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-7.datepicker(type="text", value="2016.8.8", disabled="disabled")
+                  | 日止
+              li.item-content
+                .item-inner.sum 共计：
+                  span.num 31 
+                  | 天
+      .content-block
+        .content-block-inner.text-center.comfirmation
+          h4.header.divider 是否认同总部建议？
+          a.button.inline.button-fill.button-red(href="schedule-plan.html") 接受
+          a.button.inline.button-fill(href="schedule-self.html") 自行规划
+
+
+      
+      
+  

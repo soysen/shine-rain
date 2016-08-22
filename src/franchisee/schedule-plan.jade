@@ -1,0 +1,139 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 建议期程规划
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.toolbar-through
+  .page(data-page="schedule-plan")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link.active(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="operating.html")
+          i.menu-cart.icon
+          | 商城 
+        a.link(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .content-block.no-padding.yellow-section
+        .countdown-calendar
+          .calendar-container
+            .header 
+              i.icon.clock-w
+              | 倒计时
+            .content.with-note
+              span.date 28
+              | 天
+              .text-red 提前 2 天
+      .content-block.no-padding-top
+        .content-block-inner
+          .list-block.schedule
+            ul
+              li.item-content.with-checkbox.with-status
+                input#checkbox-1(type="checkbox", checked="checked")
+                label.checkbox(for="checkbox-1")
+                .item-inner 选址日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至  
+                  .item-input
+                      input#datepicker-11.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-2(type="checkbox", checked="checked")
+                label.checkbox(for="checkbox-2")
+                .item-inner 商圈评估日期：
+                .item-after 
+                  span.date_num 8
+                  | 天
+                  span.divider / 
+                  | 至  
+                  .item-input
+                      input#datepicker-12.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-3(type="checkbox", checked="checked")
+                label.checkbox(for="checkbox-3")
+                .item-inner 装修日期：
+                .item-after 1
+                  span.date_num 5
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input
+                      input#datepicker-13.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-4(type="checkbox", checked="checked")
+                label.checkbox(for="checkbox-4")
+                span.item-status.delay 延迟3天
+                .item-inner 人员招募日期：
+                .item-after
+                  span.date_num  
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-14.datepicker(type="text", value="", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-5(type="checkbox")
+                label.checkbox(for="checkbox-5")
+                span.item-status.early 提前6天
+                .item-inner 人员培训日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至 
+                  .item-input 
+                    input#datepicker-15.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-6(type="checkbox")
+                label.checkbox(for="checkbox-6")
+                span.item-status.delay 延迟1天
+                .item-inner 首批物料到店日期：
+                .item-after 
+                  span.date_num 4
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-16.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content.with-checkbox.with-status
+                input#checkbox-7(type="checkbox")
+                label.checkbox(for="checkbox-7")
+                .item-inner 开店日期：
+                .item-after 
+                  span.date_num 6
+                  | 天
+                  span.divider / 
+                  | 至
+                  .item-input 
+                    input#datepicker-17.datepicker(type="text", value="2016.8.8", readonly='readonly')
+                  | 日止
+              li.item-content
+                .item-inner.sum 共计：
+                  span.num 31 
+                  | 天
+      
+
+      
+      
+  
