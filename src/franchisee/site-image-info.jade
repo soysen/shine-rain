@@ -1,0 +1,39 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="index.html")
+        i.chevron-left.icon
+    .center.sliding 店铺详情 
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.toolbar-through
+  .page(data-page="site-image-info")
+    .page-content
+      form.sites-form
+        .content-block.no-padding.sites-form
+          .content-block-inner
+            textarea.no-border(placeholder="添加图片的说明（10个字以内） ... ...")
+            .row
+              .col-25
+                a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+              .col-25
+                a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+              .col-25
+                a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+              .col-25
+                label.photo <input type="file" />
+        .list-block.with-accordion
+          ul
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title <i class="position-r icon"></i> 所在位置
+              .accordion-item-content
+                .content-block
+      button.button.button-fill.button-red.button-big(type="submit") 保存
+
+
+      
+      
+  

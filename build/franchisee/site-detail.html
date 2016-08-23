@@ -16,45 +16,376 @@
 <div class="pages toolbar-through">
   <div data-page="site-detail" class="page with-subnavbar">
     <div class="page-content">
-      <div class="list-block media-list site-options">
-        <ul>
-          <li><a href="#" class="item-content item-link">
-              <div class="item-media"><img src="http://placehold.it/120x90"/></div>
-              <div class="item-inner">
-                <div class="item-title-row">
-                  <div class="item-title">双井－合生国际</div>
-                  <div class="item-after wait-check">待审核</div>
+      <div class="tabs">
+        <div id="tab-1" class="tab active">
+          <div class="list-block with-accordion">
+            <ul>
+              <li class="accordion-item"><a class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">所在地区</div>
+                  </div></a>
+                <div class="accordion-item-content">
+                  <div class="content-block"></div>
                 </div>
-                <div class="item-text">北京市朝阳区芳草地国际学校双花园校区</div>
-                <div class="item-text description">89㎡  南
-                  <div class="text-orange pull-right">126万/年</div>
+              </li>
+            </ul>
+          </div>
+          <div class="list-block site-address">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">邮政编码</div>
+                    <div class="item-input">
+                      <input type="text" name="zipcode"/>
+                    </div>
+                  </div>
                 </div>
-              </div></a></li>
-          <li><a href="#" class="item-content item-link">
-              <div class="item-media"><img src="http://placehold.it/120x90"/></div>
-              <div class="item-inner">
-                <div class="item-title-row">
-                  <div class="item-title">西单大悦城</div>
-                  <div class="item-after is-check">审核中</div>
+              </li>
+            </ul>
+          </div>
+          <div class="list-block with-accordion">
+            <ul>
+              <li class="accordion-item"><a class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">所在街道</div>
+                  </div></a>
+                <div class="accordion-item-content">
+                  <div class="content-block"></div>
                 </div>
-                <div class="item-text">北京市西城区西单北大街甲131号</div>
-                <div class="item-text description">101㎡  南北
-                  <div class="text-orange pull-right">96万/年</div>
+              </li>
+            </ul>
+          </div>
+          <div class="list-block site-address">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <textarea placeholder="请填写地址详情，区，门牌号等"></textarea>
+                  </div>
                 </div>
-              </div></a></li>
-          <li><a href="#" class="item-content item-link">
-              <div class="item-media"><img src="http://placehold.it/120x90"/></div>
-              <div class="item-inner">
-                <div class="item-title-row">
-                  <div class="item-title">东单银街</div>
-                  <div class="item-after wait-confirm">待商榷</div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-block">
+            <h6 class="header">门店位置</h6><img src="img/map.png"/>
+          </div>
+        </div>
+        <div id="tab-2" class="tab">
+          <div class="content-block sites-form">
+            <div class="content-block-inner">
+              <h3 class="header">房屋概况：</h3>
+              <div class="row">
+                <div class="col-50">
+                  <label>房屋使用形式</label>
+                  <div class="input-radio">
+                    <input id="checkbox-1" type="radio" name="use-type" value="0"/>
+                    <label for="checkbox-1">租赁</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-2" type="radio" name="use-type" value="1"/>
+                    <label for="checkbox-2">自有</label>
+                  </div>
                 </div>
-                <div class="item-text">北京市东城区东四南大街189号</div>
-                <div class="item-text description">101㎡  南北
-                  <div class="text-orange pull-right">216万/年</div>
+                <div class="col-50">
+                  <label>契约手续</label>
+                  <div class="input-radio">
+                    <input id="checkbox-3" type="radio" name="formalities" value="1"/>
+                    <label for="checkbox-3">全</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-4" type="radio" name="formalities" value="0"/>
+                    <label for="checkbox-4">否</label>
+                  </div>
                 </div>
-              </div></a></li>
-        </ul>
+                <div class="col-100">
+                  <label>是否新店</label>
+                  <div class="input-radio">
+                    <input id="checkbox-5" type="radio" name="is_new" value="1"/>
+                    <label for="checkbox-5">是</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-6" type="radio" name="is_new" value="0"/>
+                    <label for="checkbox-6">否</label>
+                  </div>
+                </div>
+                <div class="col-100">
+                  <label>营业所需条件</label>
+                  <div class="input-radio">
+                    <input id="checkbox-7" type="checkbox" value="0" name="conditions[]"/>
+                    <label for="checkbox-7">消防许可</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-8" type="checkbox" value="1" name="conditions[]"/>
+                    <label for="checkbox-8">餐饮许可</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-9" type="checkbox" value="2" name="conditions[]"/>
+                    <label for="checkbox-9">环保许可</label>
+                  </div>
+                </div>
+                <div class="col-100">电量
+                  <input type="text" name="electric" class="inline"/>千瓦
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-100">
+                  <label>备注</label>
+                  <div class="note">
+                    <textarea name="note"></textarea>
+                    <div class="last">已输入69字</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block sites-form">
+            <div class="content-block-inner">
+              <h3 class="header">房屋规模：</h3>
+              <div class="row">
+                <div class="col-33">
+                  <label>总面积</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>m<sup>2</sup></span></div>
+                </div>
+                <div class="col-33">
+                  <label>店面深度</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>m</span></div>
+                </div>
+                <div class="col-33">
+                  <label>店面宽度</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>m</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-50">
+                  <label>楼层</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>层</span></div>
+                </div>
+                <div class="col-50">
+                  <label>举架高度</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>m</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-100">
+                  <label>备注</label>
+                  <div class="note">
+                    <textarea name="note"></textarea>
+                    <div class="last">已输入69字</div>
+                  </div>
+                  <label>平面圖</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-33">
+                  <label class="photo"> 
+                    <input type="file"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block sites-form">
+            <div class="content-block-inner">
+              <div class="row">
+                <div class="col-100">
+                  <label>外围概况：</label>
+                  <div class="input-radio">
+                    <input id="checkbox-16" type="checkbox" value="0" name="conditions2[]"/>
+                    <label for="checkbox-16">消防许可</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-17" type="checkbox" value="1" name="conditions2[]"/>
+                    <label for="checkbox-17">餐饮许可</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-18" type="checkbox" value="2" name="conditions2[]"/>
+                    <label for="checkbox-18">环保许可</label>
+                  </div>
+                </div>
+                <div class="col-50">
+                  <label>朝向</label>
+                  <div class="select"><select><option>東</option><option>南</option><option>西</option><option>北</option></select> </div><span>方位</span>
+                </div>
+                <div class="col-50">
+                  <label>停车位</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>位</span></div>
+                </div>
+                <div class="col-50">
+                  <label>是否主街店面</label>
+                  <div class="input-radio">
+                    <input id="checkbox-10" type="radio" name="main-street" value="1"/>
+                    <label for="checkbox-10">是</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-11" type="radio" name="main-street" value="0"/>
+                    <label for="checkbox-11">否</label>
+                  </div>
+                </div>
+                <div class="col-100">
+                  <label>当街店面宽度</label>
+                  <div class="input with-text"><input type="text" name="" class="inline" /> <span>m</span></div>
+                </div>
+                <div class="col-100">
+                  <label>是否独立建筑</label>
+                  <div class="input-radio">
+                    <input id="checkbox-12" type="radio" name="main-street" value="1"/>
+                    <label for="checkbox-12">是</label>
+                  </div>
+                  <div class="input-radio">
+                    <input id="checkbox-13" type="radio" name="main-street" value="0"/>
+                    <label for="checkbox-13">否</label>
+                  </div>
+                </div>
+                <div class="col-100">
+                  <label>店门口是否有足够开业庆典使用场地</label>
+                  <div class="row">
+                    <div class="col-50">
+                      <div class="input-radio">
+                        <input id="checkbox-14" type="radio" name="main-street" value="1"/>
+                        <label for="checkbox-14">是</label>
+                      </div>
+                      <div class="input-radio">
+                        <input id="checkbox-15" type="radio" name="main-street" value="0"/>
+                        <label for="checkbox-15">否</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="input with-text"><input type="text" name="" class="inline" /> <span>m<sup>2</sup></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-100">
+                  <label>商圈介绍</label>
+                  <div class="text">
+                    <textarea name="intro"></textarea>
+                  </div>
+                  <label>经营模式</label>
+                  <div class="text">
+                    <textarea name="business-model"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block sites-form">
+            <div class="content-block-inner">
+              <h3 class="header">同行业调查表：</h3>
+              <label>商圈资料</label>
+              <div class="row">
+                <div class="col-50">
+                  <label>商圈名称</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-50">
+                  <label>招商热线</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-100">
+                  <label>地址</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-50">
+                  <label>营业时间</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-50">
+                  <label>时间</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-100">
+                  <label>客流</label>
+                  <div class="row">
+                    <div class="col-50"> 
+                      <div class="input with-text"><span>上午/人 </span><input type="text" class="inline" /></div>
+                    </div>
+                    <div class="col-50"> 
+                      <div class="input with-text"><span>下午/人 </span><input type="text" class="inline" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-50">
+                  <label>商场体量</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+                <div class="col-50">
+                  <label>消费定位</label>
+                  <div class="input with-text"><input type="text" class="inline input-sm" /><span>元/人(均)</span></div>
+                </div>
+                <div class="col-100">
+                  <label>道路条件</label>
+                  <div class="row">
+                    <div class="input col-50 with-text"><input type="text" class="inline" /><span>双向道</span></div>
+                    <div class="input col-50 with-text"><input type="text" class="inline" /><span>单项道</span></div>
+                    <div class="input col-50 with-text"><input type="text" class="inline" /><span>停车位</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block sites-form">
+            <div class="content-block-inner">
+              <h3 class="header">竞争资料</h3>
+              <div class="row">
+                <div class="col-100">
+                  <label>店名</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+                <div class="col-50">
+                  <label>面积</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+                <div class="col-50">
+                  <label>形态</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+                <div class="col-50">
+                  <label>营业人数</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+                <div class="col-50">
+                  <label>竞争等级</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+                <div class="col-100">
+                  <label>特色服务</label>
+                  <div class="input"><input type="text" name="" /></div>
+                </div>
+              </div><a class="button button-fill button-red pull-left">＋添加竞争商家</a>
+            </div>
+          </div>
+          <button type="submit" class="button button-fill button-red button-big">保存</button>
+        </div>
+        <div id="tab-3" class="tab">
+          <div class="content-block image-list">
+            <h3 class="header">室外全景 （正面、侧面）</h3>
+            <div class="content-block-inner">
+              <div class="row">
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-info.html" class="photo"><input type="file" /></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block image-list">
+            <h3 class="header">室内全景 （窗户、柱子、消防栓位置等）</h3>
+            <div class="content-block-inner">
+              <div class="row">
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25"><a href="site-image-detail.html" class="image"><img src="http://placehold.it/200x200" /></a></div>
+                <div class="col-25">
+                  <label class="photo"><input type="file" /></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

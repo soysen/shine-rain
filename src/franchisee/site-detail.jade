@@ -18,42 +18,280 @@
 .pages.toolbar-through
   .page.with-subnavbar(data-page="site-detail")
     .page-content
-      .list-block.media-list.site-options
-        ul
-          li
-            a.item-content.item-link(href="#")
-              .item-media
-                img(src="http://placehold.it/120x90")
-              .item-inner
-                .item-title-row
-                  .item-title 双井－合生国际
-                  .item-after.wait-check 待审核
-                .item-text 北京市朝阳区芳草地国际学校双花园校区
-                .item-text.description 89㎡  南
-                  .text-orange.pull-right 126万/年
-          li
-            a.item-content.item-link(href="#")
-              .item-media
-                img(src="http://placehold.it/120x90")
-              .item-inner
-                .item-title-row
-                  .item-title 西单大悦城
-                  .item-after.is-check 审核中
-                .item-text 北京市西城区西单北大街甲131号
-                .item-text.description 101㎡  南北
-                  .text-orange.pull-right 96万/年
-          li
-            a.item-content.item-link(href="#")
-              .item-media
-                img(src="http://placehold.it/120x90")
-              .item-inner
-                .item-title-row
-                  .item-title 东单银街
-                  .item-after.wait-confirm 待商榷
-                .item-text 北京市东城区东四南大街189号
-                .item-text.description 101㎡  南北
-                  .text-orange.pull-right 216万/年
-      
+      .tabs
+        #tab-1.tab.active
+          .list-block.with-accordion
+            ul
+              li.accordion-item
+                a.item-content.item-link
+                  .item-inner
+                    .item-title 所在地区
+                .accordion-item-content
+                  .content-block
+          .list-block.site-address
+            ul
+              li
+                .item-content
+                  .item-inner
+                    .item-title.label 邮政编码
+                    .item-input
+                      input(type="text", name="zipcode")
+          .list-block.with-accordion
+            ul
+              li.accordion-item
+                a.item-content.item-link
+                  .item-inner
+                    .item-title 所在街道
+                .accordion-item-content
+                  .content-block
+          .list-block.site-address
+            ul
+              li
+                .item-content
+                  .item-inner
+                    textarea(placeholder="请填写地址详情，区，门牌号等")
+          .content-block
+            h6.header 门店位置
+            img(src="img/map.png")
+        #tab-2.tab
+          .content-block.sites-form
+            .content-block-inner
+              h3.header 房屋概况：
+              .row
+                .col-50
+                  label 房屋使用形式
+                  .input-radio
+                    input#checkbox-1(type="radio", name="use-type", value="0")
+                    label(for="checkbox-1") 租赁
+                  .input-radio
+                    input#checkbox-2(type="radio", name="use-type", value="1")
+                    label(for="checkbox-2") 自有
+                .col-50
+                  label 契约手续
+                  .input-radio
+                    input#checkbox-3(type="radio", name="formalities", value="1")
+                    label(for="checkbox-3") 全
+                  .input-radio
+                    input#checkbox-4(type="radio", name="formalities", value="0")
+                    label(for="checkbox-4") 否
+                .col-100
+                  label 是否新店
+                  .input-radio
+                    input#checkbox-5(type="radio", name="is_new", value="1")
+                    label(for="checkbox-5") 是
+                  .input-radio
+                    input#checkbox-6(type="radio", name="is_new", value="0")
+                    label(for="checkbox-6") 否
+                .col-100
+                  label 营业所需条件
+                  .input-radio
+                    input#checkbox-7(type="checkbox", value="0", name="conditions[]")
+                    label(for="checkbox-7") 消防许可
+                  .input-radio
+                    input#checkbox-8(type="checkbox", value="1", name="conditions[]")
+                    label(for="checkbox-8") 餐饮许可
+                  .input-radio
+                    input#checkbox-9(type="checkbox", value="2", name="conditions[]")
+                    label(for="checkbox-9") 环保许可
+                .col-100 电量
+                  input.inline(type="text", name="electric")
+                  | 千瓦
+              .row
+                .col-100
+                  label 备注
+                  .note
+                    textarea(name="note")
+                    .last 已输入69字
+          .content-block.sites-form
+            .content-block-inner
+              h3.header 房屋规模：
+              .row
+                .col-33
+                  label 总面积
+                  .input.with-text <input type="text" name="" class="inline" /> <span>m<sup>2</sup></span>
+                .col-33
+                  label 店面深度
+                  .input.with-text <input type="text" name="" class="inline" /> <span>m</span>
+                .col-33
+                  label 店面宽度
+                  .input.with-text <input type="text" name="" class="inline" /> <span>m</span>
+              .row
+                .col-50
+                  label 楼层
+                  .input.with-text <input type="text" name="" class="inline" /> <span>层</span>
+                .col-50
+                  label 举架高度
+                  .input.with-text <input type="text" name="" class="inline" /> <span>m</span>
+              .row
+                .col-100
+                  label 备注
+                  .note
+                    textarea(name="note")
+                    .last 已输入69字
+                  label 平面圖
+              .row
+                .col-33
+                  label.photo 
+                    input(type="file")
+          .content-block.sites-form
+            .content-block-inner
+              .row
+                .col-100
+                  label 外围概况：
+                  .input-radio
+                    input#checkbox-16(type="checkbox", value="0", name="conditions2[]")
+                    label(for="checkbox-16") 消防许可
+                  .input-radio
+                    input#checkbox-17(type="checkbox", value="1", name="conditions2[]")
+                    label(for="checkbox-17") 餐饮许可
+                  .input-radio
+                    input#checkbox-18(type="checkbox", value="2", name="conditions2[]")
+                    label(for="checkbox-18") 环保许可
+                .col-50
+                  label 朝向
+                  .select <select><option>東</option><option>南</option><option>西</option><option>北</option></select> 
+                  | <span>方位</span>
+                .col-50
+                  label 停车位
+                  .input.with-text <input type="text" name="" class="inline" /> <span>位</span>
+                .col-50
+                  label 是否主街店面
+                  .input-radio
+                    input#checkbox-10(type="radio", name="main-street", value="1")
+                    label(for="checkbox-10") 是
+                  .input-radio
+                    input#checkbox-11(type="radio", name="main-street", value="0")
+                    label(for="checkbox-11") 否
+                .col-100
+                  label 当街店面宽度
+                  .input.with-text <input type="text" name="" class="inline" /> <span>m</span>
+                .col-100
+                  label 是否独立建筑
+                  .input-radio
+                    input#checkbox-12(type="radio", name="main-street", value="1")
+                    label(for="checkbox-12") 是
+                  .input-radio
+                    input#checkbox-13(type="radio", name="main-street", value="0")
+                    label(for="checkbox-13") 否
+                .col-100
+                  label 店门口是否有足够开业庆典使用场地
+                  .row
+                    .col-50
+                      .input-radio
+                        input#checkbox-14(type="radio", name="main-street", value="1")
+                        label(for="checkbox-14") 是
+                      .input-radio
+                        input#checkbox-15(type="radio", name="main-street", value="0")
+                        label(for="checkbox-15") 否
+                    .col-50
+                      .input.with-text <input type="text" name="" class="inline" /> <span>m<sup>2</sup></span>
+                .col-100
+                  label 商圈介绍
+                  .text
+                    textarea(name="intro")
+                  label 经营模式
+                  .text
+                    textarea(name="business-model")
+          .content-block.sites-form
+            .content-block-inner
+              h3.header 同行业调查表：
+              label 商圈资料
+              .row
+                .col-50
+                  label 商圈名称
+                  .input <input type="text" />
+                .col-50
+                  label 招商热线
+                  .input <input type="text" />
+                .col-100
+                  label 地址
+                  .input <input type="text" />
+                .col-50
+                  label 营业时间
+                  .input <input type="text" />
+                .col-50
+                  label 时间
+                  .input <input type="text" />
+                .col-100
+                  label 客流
+                  .row
+                    .col-50 
+                      .input.with-text
+                        span 上午/人 
+                        | <input type="text" class="inline" />
+                    .col-50 
+                      .input.with-text
+                        span 下午/人 
+                        | <input type="text" class="inline" />
+                .col-50
+                  label 商场体量
+                  .input <input type="text" />
+                .col-50
+                  label 消费定位
+                  .input.with-text <input type="text" class="inline input-sm" /><span>元/人(均)</span>
+                .col-100
+                  label 道路条件
+                  .row
+                    .input.col-50.with-text <input type="text" class="inline" /><span>双向道</span>
+                    .input.col-50.with-text <input type="text" class="inline" /><span>单项道</span>
+                    .input.col-50.with-text <input type="text" class="inline" /><span>停车位</span>
+          .content-block.sites-form
+            .content-block-inner
+              h3.header 竞争资料
+              .row
+                .col-100
+                  label 店名
+                  .input <input type="text" name="" />
+                .col-50
+                  label 面积
+                  .input <input type="text" name="" />
+                .col-50
+                  label 形态
+                  .input <input type="text" name="" />
+                .col-50
+                  label 营业人数
+                  .input <input type="text" name="" />
+                .col-50
+                  label 竞争等级
+                  .input <input type="text" name="" />
+                .col-100
+                  label 特色服务
+                  .input <input type="text" name="" />
+              a.button.button-fill.button-red.pull-left ＋添加竞争商家
+          button.button.button-fill.button-red.button-big(type="submit") 保存
+        #tab-3.tab
+          .content-block.image-list
+            h3.header 室外全景 （正面、侧面）
+            .content-block-inner
+              .row
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.photo(href="site-image-info.html") <input type="file" />
+          .content-block.image-list
+            h3.header 室内全景 （窗户、柱子、消防栓位置等）
+            .content-block-inner
+              .row
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  a.image(href="site-image-detail.html") <img src="http://placehold.it/200x200" />
+                .col-25
+                  label.photo <input type="file" />
 
       
       
