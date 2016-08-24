@@ -1,0 +1,103 @@
+doctype
+html
+  head(lang='zh-cn')
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    title My App
+    // Path to Framework7 Library CSS
+    link(rel="stylesheet", href="css/#{stylesheetFilename}.css")
+    link(rel="stylesheet", href="css/#{stylesheetColorsFilename}.css")
+    // Path to your custom app styles
+    link(rel="stylesheet", href="css/app.css")
+  body
+    .statusbar-overlay
+    .views
+      .view.view-main
+        .navbar
+          .navbar-inner
+            .left
+              a.back.link(href="index.html")
+                i.chevron-left.icon
+            .center.sliding 运营助手
+            .right
+              a(data-popover=".popover-links", class="link open-popover")
+                i.list.icon
+        .pages.navbar-through.toolbar-through
+          .page(data-page="operations")
+            .toolbar.tabbar
+              .toolbar-inner
+                a.link(href="index.html")
+                  i.menu-index.icon
+                  | 首页
+                a.link(href="message.html")
+                  i.menu-message.icon
+                  | 消息
+                a.link.active(href="store.html")
+                  i.menu-business.icon
+                  | 运营
+                a.link(href="operating.html")
+                  i.menu-cart.icon
+                  | 商城 
+                a.link(href="my.html")
+                  i.menu-my.icon
+                  | 我的
+            .page-content
+              .list-block.media-list.operations
+                ul
+                  li
+                    a.item-link.item-content(href="before_open.html")
+                      .item-media <img src="img/before_open.png" />
+                      .item-inner
+                        .item-title-row
+                          .item-title 开店前检查
+              .list-block.media-list.operations
+                ul
+                  li
+                    a.item-link.item-content(href="after_close.html")
+                      .item-media <img src="img/after_close.png" />
+                      .item-inner
+                        .item-title-row
+                          .item-title 闭店前检查
+              .list-block.media-list.operations
+                ul
+                  li
+                    a.item-link.item-content(href="storage.html")
+                      .item-media <img src="img/storage.png" />
+                      .item-inner
+                        .item-title-row
+                          .item-title 库存盘点
+            
+    .popover.popover-links
+      .popover-angle
+      .popover-inner
+        .list-block
+          ul
+            li
+              a.notification(href="message.html")
+                i.message.icon
+                | 消息
+            li
+              a(href="index.html")
+                i.index.icon
+                | 首页
+            li
+              a(href="order-list.html")
+                i.cart-w.icon
+                | 购物车
+            li
+              a(href="help.html") 
+                i.help.icon
+                | 帮助
+            li
+              a(href="help.html") 
+                i.cart-w.icon
+                | 开店历史
+    // Jquery
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
+    // Path to Framework7 Library JS
+    script(type="text/javascript", src="js/#{scriptFilename}.js")
+    // Path to your app js
+    script(type="text/javascript", src="js/app.js")
+ 

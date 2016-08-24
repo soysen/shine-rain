@@ -122,5 +122,13 @@ myApp.onPageInit('schedule-self', function (page) {
 		$$(".modal-in").addClass("store-open");
 
 	});
+});
+
+
+myApp.onPageInit('site-detail', function (page) {
+	
+	$$("input[type='file']").change(function(){
+		mainView.router.loadPage('site-image-info.html');
+	});
 
 });
