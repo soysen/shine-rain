@@ -1,0 +1,80 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="shop.html")
+        i.chevron-left.icon
+    .center.sliding 购物车
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.toolbar-through
+  .page(data-page="cart")
+    .toolbar.tabbar
+      .toolbar-inner.cart
+        label.checkbox
+          input(type="checkbox")
+          .label 全选
+        .count
+          span 合计：
+          span.price.red ￥0.00 
+          small 不含运费
+          a.button.button-red.button-fill(href="cart-confirm.html") 结算（0）
+    .page-content
+      .list-block.media-list.cart
+        ul
+          li.swipeout
+            label.label-checkbox.item-content.swipeout-content
+              input(type="checkbox")
+              .item-media <i class="icon icon-form-checkbox"></i>
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 咖喱锅底酱料
+                .item-text.description 当泰国黄咖喱酱邂逅传统牛骨老汤，浓郁鲜香中尽显异国风味
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+            .swipeout-actions-right
+              a.action1.bg-red &times;
+          li.swipeout
+            label.label-checkbox.item-content.swipeout-content
+              input(type="checkbox")
+              .item-media <i class="icon icon-form-checkbox"></i>
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 招牌麻辣锅
+                .item-text.description 招牌麻辣汤 传承重庆地道老火锅技法，融合新潮的麻辣元素
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+            .swipeout-actions-right
+              a.action1.bg-red &times;
+          li.swipeout
+            label.label-checkbox.item-content.swipeout-content
+              input(type="checkbox")
+              .item-media <i class="icon icon-form-checkbox"></i>
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 麻酥椒香锅
+                .item-text.description 麻与辣的结合，使味蕾与神经发出电光火石般的碰撞。
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+            .swipeout-actions-right
+              a.action1.bg-red &times;
+
+

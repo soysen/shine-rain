@@ -1,0 +1,98 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="shop.html")
+        i.chevron-left.icon
+    .center.sliding 确认订单
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.toolbar-through
+  .page(data-page="cart-confirm")
+    .toolbar.tabbar
+      .toolbar-inner.cart
+        .count
+          span 合计：
+          span.price.red ￥2144.00 
+          a.button.button-red.button-fill.open-popup(href="#", data-popup=".popup-pay") 支付
+    .page-content
+      .list-block.media-list.mail
+        ul
+          li
+            .item-content
+              .item-media <i class="position-r icon"></i>
+              .item-inner
+                .item-title-row 
+                  .item-title 收货人：天瑞华
+                  .item-after 18612457413
+                .item-text 收货地址：北京市朝外大街工人体育场36号院2号楼1504室
+
+      .list-block.media-list.cart.confirm
+        ul
+          li
+            .item-content.header
+              .item-inner
+                .item-title-row
+                  .item-title 商品详情
+          li
+            .item-content
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 咖喱锅底酱料
+                .item-text.description 当泰国黄咖喱酱邂逅传统牛骨老汤，浓郁鲜香中尽显异国风味
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+          li
+            .item-content
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 招牌麻辣锅
+                .item-text.description 招牌麻辣汤 传承重庆地道老火锅技法，融合新潮的麻辣元素
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+          li
+            .item-content
+              .item-media <img src="http://lorempixel.com/200/200/food" /> 
+              .item-inner
+                .item-title-row
+                  .item-title 麻酥椒香锅
+                .item-text.description 麻与辣的结合，使味蕾与神经发出电光火石般的碰撞。
+                .item-text.meta 
+                  span.price.red &yen;17
+                  span.price.del &yen;17
+                  .num-tool
+                    a.button.less -
+                    input(type="tel", value="300", min="0")
+                    a.button.more +
+          li
+            .item-content.bg-white
+              .item-inner
+                .item-title-row
+                  .item-title 商品金额
+                  .item-after <span class="yen">&yen;</span><span class="price">2104.00</span>
+          li
+            .item-content.bg-white
+              .item-inner
+                .item-title-row
+                  .item-title 物流
+                  .item-after <span class="yen">&yen;</span><span class="price">20.00</span>
+          li
+            .item-content.bg-white
+              .item-inner
+                .item-title-row
+                  .item-title 优惠
+                  .item-after <span class="yen">&yen;</span><span class="price">10.00</span>
+
+

@@ -26,7 +26,7 @@
         <div class="pages navbar-through toolbar-through">
           <div data-page="index" class="page">
             <div class="toolbar tabbar">
-              <div class="toolbar-inner"><a href="index.html" class="link active"><i class="menu-index icon"></i>首页</a><a href="message.html" class="link"><i class="menu-message icon"></i>消息</a><a href="store.html" class="link"><i class="menu-store icon"></i>开店</a><a href="operating.html" class="link"><i class="menu-cart icon"></i>商城 </a><a href="my.html" class="link"><i class="menu-my icon"></i>我的</a></div>
+              <div class="toolbar-inner"><a href="index.html" class="link active"><i class="menu-index icon"></i>首页</a><a href="message.html" class="link"><i class="menu-message icon"></i>消息</a><a href="store.html" class="link"><i class="menu-store icon"></i>开店</a><a href="shop.html" class="link"> <i class="menu-cart icon"></i>商城 </a><a href="my.html" class="link"><i class="menu-my icon"></i>我的</a></div>
             </div>
             <div class="page-content">
               <div class="swiper-container swiper-init">
@@ -71,6 +71,64 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="popup popup-pay">
+      <div class="header text-center"><a href="#" class="close-popup">&times;</a>选择支付方式</div>
+      <div class="list-block pay-amount">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">支付金额：</div>
+                <div class="item-after"> <span class="text-red">2104.00元</span></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <div class="content-block-title">支付方式</div>
+      </div>
+      <div class="list-block media-list pay-type">
+        <ul>
+          <li>
+            <label class="label-checkbox item-content">
+              <div class="item-media image"><img src="img/img-zfb.png" /></div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">支付宝支付</div>
+                </div>
+              </div>
+              <input type="checkbox">
+              <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <div class="item-media image"><img src="img/img-wx.png" /></div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">微信支付</div>
+                </div>
+              </div>
+              <input type="checkbox">
+              <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <div class="item-media image"><img src="img/img-yhk.png" /></div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">银联支付</div>
+                </div>
+              </div>
+              <input type="checkbox">
+              <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+            </label>
+          </li>
+        </ul>
+      </div><a href="cart-success.html" class="button button-big button-red button-fill close-popup">确认支付</a>
     </div>
     <!-- Jquery-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

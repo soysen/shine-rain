@@ -1,0 +1,243 @@
+.navbar
+  .navbar-inner.red
+    .left
+    .center.sliding 商城
+    .right
+      a(class="link", href="cart.html")
+        i.cart-w.icon
+.pages.toolbar-through
+  .page(data-page="shop")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link.active(href="shop.html")
+          i.menu-cart.icon
+          | 商城 
+        a.link(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      a(href="#").img_ad <img src="img/shop_banner.png" />
+      .content-block
+        .row.shop-category
+          .col-20
+            a(href="shop-list.html") <i class="onsale-w red circular icon"></i> 特价区
+          .col-20
+            a(href="shop-list.html") <i class="food-w orange circular icon"></i> 原材料
+          .col-20
+            a(href="shop-list.html") <i class="material-w yellow circular icon"></i> 物料
+          .col-20
+            a(href="shop-list.html") <i class="tool-w teal circular icon"></i> 设备区
+          .col-20
+            a(href="shop-list.html") <i class="others-w blue circular icon"></i> 衍生品区
+      
+      a(href="#").img_ad <img src="img/shop_ad_1.png" />
+      a(href="#").img_ad <img src="img/shop_ad_2.png" />
+      .content-block.product-row
+        .content-block-inner
+          .row.product-preview
+            .red.header.with-border <i class="onsale icon"></i> 特价区
+              a.more.link(href="shop-list.html") 更多>>
+            table
+              tr
+                td(width="34%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-1.png"/>
+                    h4.header 会员卡
+                      span.text-red.pull-right &yen;3.0
+                    .description 1/张
+                      span.pull-right.del &yen;5.0 
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-2.png" />
+                    .content
+                      h4.header.text-center 餐具包
+                      .text-red.text-center &yen;0.6
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-3.png" />
+                    h4.header.text-center 双层料理台
+                    .text-red.text-center &yen;1150.0
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-4.png" />
+                    h4.header.text-center 雨伞
+                    .text-red.text-center &yen;30.0
+              tr
+                td(width="34%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-5.png") />
+                    .content
+                      h4.header 半兽人条幅
+                        span.text-red.pull-right &yen;3.0
+                      .description 1/张
+                        span.pull-right.del &yen;5.0 
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-6.png" />
+                    .content
+                      h4.header.text-center 头巾
+                      .text-red.text-center &yen;15.0
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-7.png" />
+                    .content
+                      h4.header.text-center 吧台椅
+                      .text-red.text-center &yen;100.0
+                td(width="22%")
+                  a(href="shop-detail.html")
+                    .image <img src="img/product/prod-8.png" />
+                    .content
+                      h4.header.text-center 精品肥牛
+                      .text-red.text-center &yen;1450.0
+            
+      .content-block.product-row
+        .content-block-inner
+          .row.product-preview
+            .orange.header.with-border <i class="food icon"></i> 原材料
+              a.more.link(href="shop-list.html") 更多>>
+            table
+              tr
+                td(width="45%")
+                  a(href="shop-detail.html")
+                    .image.height <img src="img/product/prod-9.png"/>
+                    .content
+                      h4.header 辣味增海鲜酱
+                        span.text-red.pull-right &yen;340.0
+                      .description 1/箱 
+                        span.pull-right.del &yen;360.0 
+                td.with-two-item(width="55%")
+                  a(href="shop-detail.html").pull-left
+                    .image.height <img src="img/product/prod-10.png"/>
+                    .content
+                      .text-red.text-center &yen;340.0
+                      h4.header 菌王酱
+                        span.description.pull-right 1/箱 
+                  a(href="shop-detail.html").pull-left
+                    .image.height <img src="img/product/prod-11.png"/>
+                    .content
+                      .text-red.text-center &yen;380.0
+                      h4.header 孜然酱
+                        span.description.pull-right 1/箱 
+      
+      .content-block.product-row
+        .content-block-inner
+          .row.product-preview
+            .yellow.header.with-border <i class="meterial icon"></i> 物料
+              a.more.link(href="shop-list.html") 更多>>
+            table
+              tr
+                td(rowspan="2", width="50%")
+                  a(href="shop-detail.html")
+                    .image.block <img src="img/product/prod-12.png"/>
+                    .content
+                      h4.header 半兽人条幅
+                        span.text-red.pull-right &yen;3.0
+                      .description 1/张
+                        span.pull-right.del &yen;5.0 
+                td(align="bottom")
+                  a.block(href="shop-detail.html")
+                    .image.pull-left <img src="img/product/prod-13.png"/>
+                    .content
+                      .text-red.text-right &yen;0.6
+                      h4.header.text-right 餐具包 
+                        span.description 1/套
+              tr
+                td(align="bottom")
+                  a.block(href="shop-detail.html")
+                    .image.pull-left <img src="img/product/prod-14.png"/>
+                    .content.pull-right
+                      .text-red.text-right &yen;15.0
+                      h4.header.text-right 名片
+                        span.description 1/盒
+
+      .content-block.product-row
+        .content-block-inner
+          .row.product-preview
+            .teal.header.with-border <i class="tool icon"></i> 设备区
+              a.more.link(href="shop-list.html") 更多>>
+            table(width="100%")
+              tr
+                td(colspan="2")
+                  a(href="shop-detail.html")
+                    .image.large <img src="img/product/prod-15.png"/>
+                    .content
+                      h4.header 智能收银机
+                        span.text-red.pull-right &yen;3500.0
+                      .description 1/张
+                        span.pull-right.del &yen;3800.0
+                td(colspan="2")
+                  a(href="shop-detail.html")
+                    .image.large <img src="img/product/prod-16.png"/>
+                    .content
+                      h4.header 刨肉机
+                        span.text-red.pull-right &yen;4800.0
+                      .description 古城32型
+                        span.pull-right.del &yen;5000.0
+              tr
+                td(width="25%")
+                  a(href="shop-detail.html")
+                    .image.large <img src="img/product/prod-17.png"/>
+                    .content
+                      h4.header.text-center 吧台椅
+                      .text-red.text-center &yen;100.0
+                td(width="25%")
+                  a(href="shop-detail.html")
+                    .image.large <img src="img/product/prod-18.png"/>
+                    .content
+                      h4.header.text-center 单星水池
+                      .text-red.text-center &yen;300.0
+                td(width="25%")
+                  a(href="shop-detail.html")
+                    .image.large <img src="img/product/prod-19.png"/>
+                    .content
+                      h4.header.text-center 商用电磁炉
+                      .text-red.text-center &yen;1200.0
+                td(width="25%")
+                  a(href="shop-detail.html") 
+                    .image.large <img src="img/product/prod-20.png"/>
+                    .content
+                      h4.header.text-center 拉门碗柜
+                      .text-red.text-center &yen;100.0
+
+      .content-block.product-row
+        .content-block-inner
+          .row.product-preview
+            .others.header.with-border <i class="others icon"></i> 衍生品区
+              a.more.link(href="shop-list.html") 更多>>
+            table
+              tr
+                td(rowspan="2", width="50%")
+                  a(href="shop-detail.html")
+                    .image.block <img src="img/product/prod-12.png"/>
+                    .content
+                      h4.header 半兽人条幅
+                        span.text-red.pull-right &yen;3.0
+                      .description 1/张
+                        span.pull-right.del &yen;5.0 
+                td(align="bottom")
+                  a.block(href="shop-detail.html")
+                    .image.pull-left <img src="img/product/prod-13.png"/>
+                    .content
+                      .text-red.text-right &yen;0.6
+                      h4.header.text-right 餐具包 
+                        span.description 1/套
+              tr
+                td(align="bottom")
+                  a.block(href="shop-detail.html")
+                    .image.pull-left <img src="img/product/prod-14.png"/>
+                    .content.pull-right
+                      .text-red.text-right &yen;15.0
+                      h4.header.text-right 名片
+                        span.description 1/盒
+
+
+

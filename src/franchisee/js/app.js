@@ -118,17 +118,28 @@ myApp.onPageInit('schedule-self', function (page) {
 				'<img class="note note-2" src="img/store-open-2.png">'+
 				'<a class="sign sign-2" href=""><img src="img/store-open-3.png"></a>'
 		});
-
 		$$(".modal-in").addClass("store-open");
-
 	});
 });
 
 
 myApp.onPageInit('site-detail', function (page) {
-	
 	$$("input[type='file']").change(function(){
 		mainView.router.loadPage('site-image-info.html');
 	});
-
 });
+
+myApp.onPageInit('shop-detail', function(e) {
+    var mySwiper = new Swiper('.swiper-container', {
+		preloadImages: false,
+		lazyLoading: true,
+		pagination: '.swiper-pagination'
+	});
+});
+
+myApp.onPageInit('cart-confirm', function(e) {
+	myApp.popup('.popup-pay');
+});
+// myApp.onPageInit('cart-success', function(e) {
+//     $('.popup-pay a.close-popup').trigger('click');
+// });
