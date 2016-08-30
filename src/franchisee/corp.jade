@@ -1,0 +1,46 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="address.html")
+        i.chevron-left.icon
+    .center.sliding 商务合作
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page(data-page="corp")
+    .page-content
+      .list-block.form.no-border
+        ul
+          li
+            label.item-content
+              .item-inner
+                .item-title.required.label 公司名称
+                .item-input <input type="text" />
+          li
+            label.item-content
+              .item-inner
+                .item-title.required.label 手机号码
+                .item-input <input type="text" />
+          li
+            label.item-content
+              .item-inner
+                .item-title.required.label 您的姓名
+                .item-input <input type="text" />
+          li
+            label.item-content
+              .item-inner
+                .item-title.label QQ
+                .item-input <input type="text" />
+          li
+            label.item-content
+              .item-inner
+                .item-title.label 邮箱
+                .item-input <input type="text" />
+          li
+            label.item-content
+              .item-inner
+                .item-title.label 产品意向
+                .item-input <textarea></textarea>
+      
+      button.button.button-red.button-big.button-fill(type="summit") 提交

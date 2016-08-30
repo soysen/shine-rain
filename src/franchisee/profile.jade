@@ -1,0 +1,39 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="my.html")
+        i.chevron-left.icon
+    .center.sliding 个人资料
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page(data-page="profile")
+    .page-content
+      .list-block
+        ul
+          li
+            a.item-content.item-link.avatar
+              .item-inner
+                .item-title 头像
+                .item-after
+                  img(src="http://placehold.it/86x86").image
+      .list-block
+        ul
+          li
+            a.item-content.item-link.no-bg
+              .item-inner
+                .item-title 用户名
+                .item-after 0eghcsoi9
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 昵称 
+                .item-after 天瑞华
+          li
+            a.item-content.item-link
+              .item-inner
+                .item-title 性别
+                .item-after 未设置
+
+

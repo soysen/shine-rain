@@ -1,0 +1,53 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="address.html")
+        i.chevron-left.icon
+    .center.sliding 添加新地址
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page(data-page="add-address")
+    .page-content
+      .full-page
+        .list-block.accordion-list.form
+          ul
+            li
+              .item-content
+                .item-inner
+                  .item-title.label 收货人
+                  .item-input <input type="text" />
+            li
+              .item-content
+                .item-inner
+                  .item-title.label 联系电话
+                  .item-input <input type="text" />
+            li.accordion-item
+              a.item-content.item-link
+                .item-inner
+                  .item-title 选择地区
+              .accordion-item-content
+                .list-block
+                  ul
+                    li
+                      a.item-content.item-link
+                        .item-inner
+                          .item-title 地區 1
+                    li
+                      a.item-content.item-link
+                        .item-inner
+                          .item-title 地區 2
+            li
+              .item-content.no-border
+                .item-inner <textarea placeholder="请填写详细地址"></textarea>
+            li
+              .item-content
+                .item-inner
+                  label.checkbox 
+                    input(type="checkbox")
+                    span.label 设为默认地址
+        
+      a.button.button-big.button-red.button-fill(href="address.html") 保存
+
+

@@ -62,7 +62,7 @@ html.ios-gt-8 .navbar .center {
 .navbar-through .page-content.with-subnavbar, 
 .navbar-fixed .page-content.with-subnavbar, 
 .navbar-through .subnavbar ~ .page-content, 
-navbar-fixed .subnavbar ~ .page-content {
+.navbar-fixed .subnavbar ~ .page-content {
 	padding-top: 82px;
 }
 .navbar-through .with-subnavbar.big .page-content, 
@@ -70,8 +70,11 @@ navbar-fixed .subnavbar ~ .page-content {
 .navbar-through .page-content.with-subnavbar.big, 
 .navbar-fixed .page-content.with-subnavbar.big, 
 .navbar-through .subnavbar.big ~ .page-content, 
-navbar-fixed .subnavbar.big ~ .page-content {
+.navbar-fixed .subnavbar.big ~ .page-content {
 	padding-top: 92px;
+}
+.navbar:after {
+	background-color: #e0e0e0;
 }
 
 .content-block {
@@ -416,7 +419,7 @@ span.blue.label {
     top: auto;
     height: 1px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #e0e0e0;
     display: block;
     z-index: 15;
     -webkit-transform-origin: 50% 100%;
@@ -430,6 +433,9 @@ span.blue.label {
 .list-block.orders ul li a.item-content .item-inner .item-media {
 	-webkit-flex: 0;
 	flex: 0;
+}
+.list-block ul:after {
+	background-color: #e0e0e0;
 }
 .list-block.orders ul li a.item-content .item-inner .item-media img, 
 .list-block.order-detail ul li .item-media img, 

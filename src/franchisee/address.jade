@@ -1,0 +1,44 @@
+.navbar
+  .navbar-inner
+    .left
+      a.back(href="my.html")
+        i.chevron-left.icon
+    .center.sliding 收货地址
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list.icon
+.pages.navbar-through
+  .page(data-page="address")
+    .page-content
+      .full-page
+        .content-block.address
+          .content-block-inner
+            .header 
+              span.name 天瑞华   
+              span.num 18212354631   
+              span.text-red 默认地址
+            .description 北京市  朝阳区   三里屯路19号   三里屯太古里南区SLG21a-2(近麦当劳)
+            .meta 
+              label.checkbox
+                input(type="radio", name="default_address", value="0", checked="checked")
+                span.label 设为默认地址
+              .pull-right
+                a.button <i class="pencil-sm icon"></i> 編輯
+                a.button <i class="trash-sm icon"></i> 刪除
+        
+        .content-block.address
+          .content-block-inner
+            .header 
+              span.name 天瑞华   
+              span.num 18212354631
+            .description 北京市  东城区王府井大街218-3号
+            .meta 
+              label.checkbox
+                input(type="radio", name="default_address", value="1")
+                span.label 设为默认地址
+              .pull-right
+                a.button <i class="pencil-sm icon"></i> 編輯
+                a.button <i class="trash-sm icon"></i> 刪除
+      a.button.button-big.button-red.button-fill(href="add-address.html") 添加地址
+
+

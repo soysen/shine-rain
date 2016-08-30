@@ -1,6 +1,8 @@
 // Export selectors engine
 var $$ = Dom7;
 var today = new Date();
+var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+// var day_pick = [];
 
 function pickerOpt(id) {
 	return {
@@ -102,6 +104,16 @@ myApp.onPageInit('schedule-self', function (page) {
 	var dp_6 = myApp.picker(pickerOpt("#datepicker-26"));
 	var dp_7 = myApp.picker(pickerOpt("#datepicker-27"));
 
+	var $modal = {
+			title: '开店啦',
+			text: '<span class="days">31</span>',
+			afterText: '<a class="button button-big button-red button-fill share"><i class="share-w icon"></i>分享</a>'+
+				'<a class="sign sign-1"><i class="list-w icon"></i></a>'+
+				'<img class="note note-1" src="img/store-open-1.png">'+
+				'<img class="note note-2" src="img/store-open-2.png">'+
+				'<a class="sign sign-2" href="operations.html" onclick="closeModal();"><img src="img/store-open-3.png"></a>'
+		};
+
 	$$(".datepicker").change(function(e) {
 		var v = this.value;
 		$$(".countdown-calendar .content").addClass("with-note").find(".text-red").removeClass("hidden");
@@ -109,19 +121,91 @@ myApp.onPageInit('schedule-self', function (page) {
 	});
 
 	$$(".button.submit").click(function() {
-		myApp.modal({
-			title: '开店啦',
-			text: '<span class="days">31</span>',
-			afterText: '<a class="button button-big button-red button-fill share"><i class="share-w icon"></i>分享</a>'+
-				'<a class="sign sign-1"><i class="list-w icon"></i></a>'+
-				'<img class="note note-1" src="img/store-open-1.png">'+
-				'<img class="note note-2" src="img/store-open-2.png">'+
-				'<a class="sign sign-2" href=""><img src="img/store-open-3.png"></a>'
-		});
+		myApp.modal($modal);
 		$$(".modal-in").addClass("store-open");
 	});
+
+	function closeModal() {
+		debugger;
+		myApp.closeModal($modal);
+	}
 });
 
+myApp.onPageInit('before_open', function (page) {
+	var y = today.getFullYear();
+	var m = today.getMonth();
+	var d = today.getDate();
+	var w = week[today.getDay()];
+	$$(".calendar-title").html(y+"-"+(m+1)+"-"+d+" "+w);
+});
+
+myApp.onPageInit('after_close', function (page) {
+	var y = today.getFullYear();
+	var m = today.getMonth();
+	var d = today.getDate();
+	var w = week[today.getDay()];
+	$$(".calendar-title").html(y+"-"+(m+1)+"-"+d+" "+w);
+});
+
+myApp.onPageInit('calendar', function (page) {
+	var monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月' , '9月' , '10月', '11月', '12月'];
+	var y = today.getFullYear();
+	var m = today.getMonth();
+	var d = today.getDate();
+	var w = week[today.getDay()];
+	$$(".calendar-title").html(y+"-"+(m+1)+"-"+d+" "+w);
+
+	var calendarInline = myApp.calendar({
+	    container: '#calendar-inline-container',
+	    value: [new Date()],
+	    direction: 'vertical', 
+	    firstDay: 0,
+	    toolbar: false,
+	    weekHeader: false,
+	    toolbarTemplate: 
+	    	'<div class="picker-calendar-row days">' + 
+        		'<div class="picker-calendar-day">日</div>' +
+        		'<div class="picker-calendar-day">一</div>' +
+        		'<div class="picker-calendar-day">二</div>' +
+        		'<div class="picker-calendar-day">三</div>' +
+        		'<div class="picker-calendar-day">四</div>' +
+        		'<div class="picker-calendar-day">五</div>' +
+        		'<div class="picker-calendar-day">六</div>' +
+        	'</div>',
+	    onOpen: function (p) {
+	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
+	        $$('.prev').on('click', function () {
+	            calendarInline.prevMonth();
+	        });
+	        $$('.next').on('click', function () {
+	            calendarInline.nextMonth();
+	        });
+	    },
+	    onMonthAdd: function(p, values, displayValues) {
+	    	var m = $(values).data('month');
+	    	var y = $(values).data('year');
+	    	$$(values).prepend("<div class='picker-calendar-title'>"+y+"年 "+monthNames[m]+"</div>");
+	    },
+	    onChange: function (p, values, displayValues) {
+	    	console.log("onChange: "+p, values, displayValues);
+	    },
+	    onMonthYearChangeStart: function (p) {
+	    	console.log("onMonthYearChangeStart: "+p, p.currentYear, p.currentMonth);
+	        $$('.calendar-custom-toolbar .center').text(p.currentYear+"年 "+monthNames[p.currentMonth]);
+	    },
+	    onMonthYearChangeEnd: function (p, year, month) {
+	    	console.log("onMonthYearChangeEnd: "+p, year, month);
+	    },
+	    onDayClick: function (p, dayContainer, year, month, day) {
+	    	today.setYear(year);
+	    	today.setMonth(month);
+	    	today.setDate(day);
+	    	var wk = week[today.getDay()];
+	    	$$(".calendar-title").html(year+"-"+(Number(month)+1)+"-"+day+" "+wk);
+	    	$$("a.back").click();
+	    }
+	});
+});
 
 myApp.onPageInit('site-detail', function (page) {
 	$$("input[type='file']").change(function(){
@@ -137,9 +221,39 @@ myApp.onPageInit('shop-detail', function(e) {
 	});
 });
 
+myApp.onPageInit('cart', function(e) {
+
+	$$("#check-all").change(function(e){
+		var chk = this.checked;
+		$$(".list-block.media-list.cart").find('input[type="checkbox"]').each(function(){
+			this.checked = chk;
+		});
+	});
+
+	$$(".num-tool a.button").on("click", function(e) {
+		var input = $(this).siblings('input');
+		var val = Number(input.val());
+		if($(this).hasClass('less')) {
+			input.val(val-1<0?0:val-1);
+		} else {
+			input.val(val+1);
+		}
+	});
+});
+
+myApp.onPageInit('my-orders', function(e) {
+	$$(".num-tool a.button").on("click", function(e) {
+		var input = $(this).siblings('input');
+		var val = Number(input.val());
+		if($(this).hasClass('less')) {
+			input.val(val-1<0?0:val-1);
+		} else {
+			input.val(val+1);
+		}
+	});
+});
+
 myApp.onPageInit('cart-confirm', function(e) {
 	myApp.popup('.popup-pay');
 });
-// myApp.onPageInit('cart-success', function(e) {
-//     $('.popup-pay a.close-popup').trigger('click');
-// });
+

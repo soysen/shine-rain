@@ -1,0 +1,88 @@
+.navbar
+  .navbar-inner
+    .left
+      a.link.back(href="index.html")
+        i.chevron-left-w.icon
+    .center.sliding 
+    .right
+      a(data-popover=".popover-links", class="link open-popover")
+        i.list-w.icon
+.pages
+  .page.toolbar-through(data-page="my")
+    .toolbar.tabbar
+      .toolbar-inner
+        a.link(href="index.html")
+          i.menu-index.icon
+          | 首页
+        a.link(href="message.html")
+          i.menu-message.icon
+          | 消息
+        a.link(href="store.html")
+          i.menu-store.icon
+          | 开店
+        a.link(href="shop.html") 
+          i.menu-cart.icon
+          | 商城 
+        a.link.active(href="my.html")
+          i.menu-my.icon
+          | 我的
+    .page-content
+      .profile
+        .avatar
+          img(src="http://placehold.it/86x86")
+        .header 解千愁
+        .description 
+          i.user-w.icon 
+          | oefhb383
+          i.position-w.icon 
+          | 北京 海淀
+      .ui.list
+        a.item(href="my-orders.html") 全部
+        a.item(href="my-orders.html") 待付款
+        a.item(href="my-orders.html") 待发货
+        a.item(href="my-orders.html") 待收货
+        a.item(href="my-orders.html") 待评价
+        a.item(href="my-orders.html") 退款
+      .list-block
+        ul
+          li
+            a.item-content.item-link(href="profile.html")
+              .item-inner
+                .item-title 个人资料
+                .item-after
+          li
+            a.item-content.item-link(href="password.html")
+              .item-inner
+                .item-title 账号安全
+                .item-after
+          li
+            a.item-content.item-link(href="address.html")
+              .item-inner
+                .item-title 收货地址
+                .item-after
+      .list-block
+        ul
+          li
+            a.item-content.item-link(href="help.html")
+              .item-inner
+                .item-title 帮助
+                .item-after
+          li
+            a.item-content.item-link(href="feedback.html")
+              .item-inner
+                .item-title 反馈
+                .item-after
+          li
+            a.item-content.item-link(href="about.html")
+              .item-inner
+                .item-title 关于我们
+                .item-after
+          li
+            a.item-content.item-link(href="corp.html")
+              .item-inner
+                .item-title 商务合作
+                .item-after
+      .content-block.text-center
+        img.qrcode(src="img/qr_code.png", width="118px")
+        h5 扫一扫更好的了解我们<br/>版本号V1.0.0
+
